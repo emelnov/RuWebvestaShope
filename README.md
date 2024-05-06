@@ -18,7 +18,6 @@ composer require oyejorge/less.php
 
 composer require drupal/superfish
 
-composer require bshaffer/oauth2-server-php
 
 composer update
 
