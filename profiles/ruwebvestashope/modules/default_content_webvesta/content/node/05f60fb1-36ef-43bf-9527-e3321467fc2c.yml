@@ -1,0 +1,66 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 05f60fb1-36ef-43bf-9527-e3321467fc2c
+  bundle: news
+  default_langcode: ru
+  depends:
+    6e89c804-299d-4c02-b2e6-a19d106f2a49: file
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: Новость
+  created:
+    -
+      value: 1705659573
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Новость | Веста'
+    -
+      tag: meta
+      attributes:
+        name: description
+        content: 'Описание новости'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://default/new/novost'
+  path:
+    -
+      alias: /new/novost
+      langcode: ru
+      pathauto: 1
+  body:
+    -
+      value: '<p>Описание новости</p>'
+      format: full_html
+      summary: ''
+  field_date:
+    -
+      value: '2024-01-19'
+  field_image_news:
+    -
+      entity: 6e89c804-299d-4c02-b2e6-a19d106f2a49
+      alt: Новость
+      title: ''
+      width: 574
+      height: 574

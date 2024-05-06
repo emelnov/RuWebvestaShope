@@ -1,0 +1,9 @@
+uuid: be9102f5-2cfa-4788-858d-923e097421c7
+langcode: ru
+status: true
+dependencies: {  }
+id: commerce_product__product
+label: 'Product: Product'
+tags:
+  description: '[commerce_product:title] | [site:name]'
+  title: '[commerce_product:title] | [site:name]'

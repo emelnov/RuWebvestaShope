@@ -1,0 +1,62 @@
+uuid: acc08b32-d56f-40bc-98a7-0c069109cd6b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.photogallery.body
+    - field.field.node.photogallery.field_gallery
+    - node.type.photogallery
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - langcode
+        - links
+        - body
+        - field_gallery
+id: node.photogallery.default
+targetEntityType: node
+bundle: photogallery
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_gallery:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

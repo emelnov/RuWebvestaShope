@@ -1,0 +1,22 @@
+uuid: 09eae04f-4a94-47b8-9141-7716bffe0576
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vesta_theme
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: vesta_theme_content
+theme: vesta_theme
+region: content
+weight: -8
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Содержимое страницы'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,14 @@
+uuid: e5f29758-d3c5-4699-9e10-4ca3f65f8157
+langcode: ru
+status: true
+dependencies: {  }
+id: vesta_product
+label: Товар
+traits: {  }
+locked: false
+description: ''
+variationType: vesta_product
+variationTypes:
+  - vesta_product
+multipleVariations: true
+injectVariationFields: true

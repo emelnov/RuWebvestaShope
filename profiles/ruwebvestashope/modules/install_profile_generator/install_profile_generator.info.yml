@@ -1,0 +1,10 @@
+name: Install Profile Generator
+type: module
+description: Provides a drush command to create an install profile from a site's current configuration
+core_version_requirement: ^9 || ^10
+package: Custom
+
+# Information added by Drupal.org packaging script on 2023-07-30
+version: '4.0.0-alpha3'
+project: 'install_profile_generator'
+datestamp: 1690713442

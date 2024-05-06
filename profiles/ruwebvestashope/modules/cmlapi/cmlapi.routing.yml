@@ -1,0 +1,28 @@
+cmlapi.catalog:
+  path: "/admin/structure/cml/{cml}/catalog"
+  defaults:
+    _controller: '\Drupal\cmlapi\Controller\Catalog::page'
+    _title: "CMl Catalog Tree"
+  requirements:
+    _permission: "view published cml entity entities"
+cmlapi.product:
+  path: "/admin/structure/cml/{cml}/product"
+  defaults:
+    _controller: '\Drupal\cmlapi\Controller\Product::page'
+    _title: "CML Products"
+  requirements:
+    _permission: "view published cml entity entities"
+cmlapi.product-variation:
+  path: "/admin/structure/cml/{cml}/product-variaton"
+  defaults:
+    _controller: '\Drupal\cmlapi\Controller\ProductVariation::page'
+    _title: "CML Offers"
+  requirements:
+    _permission: "view published cml entity entities"
+cmlapi.scheme:
+  path: "/admin/structure/cml/{cml}/scheme"
+  defaults:
+    _controller: '\Drupal\cmlapi\Controller\SchemeController::page'
+    _title: "CML Scheme"
+  requirements:
+    _permission: "view published cml entity entities"

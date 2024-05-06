@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 15d3edb1-6cfa-4179-8114-d164f9b911e3
+  bundle: basic
+  default_langcode: ru
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: Контакты
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Веста'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://default/glavnaya-stranica'
+  body:
+    -
+      value: "<a class=\"tel\" href=\"tel:<?php print_field_info('phone_number'); ?>\"><?php print_field_info('phone_number'); ?></a>\r\n<a class=\"mail\" href=\"mailto:<?php print_field_info('mail'); ?>\"><?php print_field_info('mail'); ?></a>"
+      format: php
+      summary: ''

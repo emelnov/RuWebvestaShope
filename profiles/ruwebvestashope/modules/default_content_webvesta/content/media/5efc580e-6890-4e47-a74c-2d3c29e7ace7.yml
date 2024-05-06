@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 5efc580e-6890-4e47-a74c-2d3c29e7ace7
+  bundle: image
+  default_langcode: ru
+  depends:
+    c99bd14a-632d-426e-b6b0-3caefebc7dbe: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: gr_1_4.png
+  created:
+    -
+      value: 1709709905
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Веста'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://default/glavnaya-stranica'
+  path:
+    -
+      alias: ''
+      langcode: ru
+      pathauto: 0
+  field_media_image:
+    -
+      entity: c99bd14a-632d-426e-b6b0-3caefebc7dbe
+      alt: gr_1_4
+      title: ''
+      width: 574
+      height: 574

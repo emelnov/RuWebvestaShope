@@ -1,0 +1,61 @@
+uuid: 2417f616-4740-43de-9c9d-5bae97de0783
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.news.body
+    - field.field.node.news.field_date
+    - field.field.node.news.field_image_news
+    - node.type.news
+  module:
+    - commerce_store
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      ds_content:
+        - field_date
+        - body
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+  field_date:
+    type: commerce_store_datetime
+    label: hidden
+    settings:
+      date_format: medium
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  field_image_news: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

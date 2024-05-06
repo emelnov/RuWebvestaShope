@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: fc2ca299-79c3-464c-945d-dbc9e1310cac
+  bundle: basic
+  default_langcode: ru
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Кнопка открыть мобильное меню'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Веста'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://default/glavnaya-stranica'
+  body:
+    -
+      value: "<a id=\"open-mobile-menu\" href=\"#mobile-nav\">\r\n<svg width=\"44\" height=\"44\" viewBox=\"0 0 44 44\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<circle cx=\"22\" cy=\"22\" r=\"20.5\" stroke=\"white\" stroke-width=\"3\"/>\r\n<path d=\"M14.1777 27.5733H29.8222C30.36 27.5733 30.8 27.1333 30.8 26.5956C30.8 26.0578 30.36 25.6178 29.8222 25.6178H14.1777C13.64 25.6178 13.2 26.0578 13.2 26.5956C13.2 27.1333 13.64 27.5733 14.1777 27.5733ZM14.1777 22.6844H29.8222C30.36 22.6844 30.8 22.2444 30.8 21.7067C30.8 21.1689 30.36 20.7289 29.8222 20.7289H14.1777C13.64 20.7289 13.2 21.1689 13.2 21.7067C13.2 22.2444 13.64 22.6844 14.1777 22.6844ZM13.2 16.8178C13.2 17.3556 13.64 17.7956 14.1777 17.7956H29.8222C30.36 17.7956 30.8 17.3556 30.8 16.8178C30.8 16.28 30.36 15.84 29.8222 15.84H14.1777C13.64 15.84 13.2 16.28 13.2 16.8178Z\" fill=\"white\"/>\r\n</svg>\r\n</a>"
+      format: php
+      summary: ''

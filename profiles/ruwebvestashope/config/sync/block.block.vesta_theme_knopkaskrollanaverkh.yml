@@ -1,0 +1,25 @@
+uuid: 5d2f6fa0-f21f-4fa0-a922-a354e4f84b14
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e5867227-2d10-4069-9d76-30fff5f50607'
+  module:
+    - block_content
+  theme:
+    - vesta_theme
+id: vesta_theme_knopkaskrollanaverkh
+theme: vesta_theme
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:e5867227-2d10-4069-9d76-30fff5f50607'
+settings:
+  id: 'block_content:e5867227-2d10-4069-9d76-30fff5f50607'
+  label: 'Кнопка скролла наверх'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

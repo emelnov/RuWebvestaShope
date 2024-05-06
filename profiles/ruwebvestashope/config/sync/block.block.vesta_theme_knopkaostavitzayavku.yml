@@ -1,0 +1,25 @@
+uuid: 619ca419-8bfd-4089-b9a3-956e8a5f91ca
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:495cb108-f7ea-4a69-9b81-4e216ef6d320'
+  module:
+    - block_content
+  theme:
+    - vesta_theme
+id: vesta_theme_knopkaostavitzayavku
+theme: vesta_theme
+region: header
+weight: -7
+provider: null
+plugin: 'block_content:495cb108-f7ea-4a69-9b81-4e216ef6d320'
+settings:
+  id: 'block_content:495cb108-f7ea-4a69-9b81-4e216ef6d320'
+  label: 'Кнопка Оставить заявку'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

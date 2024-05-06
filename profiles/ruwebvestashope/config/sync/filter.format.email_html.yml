@@ -1,0 +1,20 @@
+uuid: 072ca0b0-5124-4b6a-9e36-f9c2ccd332f6
+langcode: ru
+status: true
+dependencies:
+  module:
+    - slick
+_core:
+  default_config_hash: 8UYEKlWeJ8cK8V-9ojit-_9SwBjQKk0SU-UkiuvlWKI
+name: 'Электронная почта в формате HTML'
+format: email_html
+weight: 10
+filters:
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

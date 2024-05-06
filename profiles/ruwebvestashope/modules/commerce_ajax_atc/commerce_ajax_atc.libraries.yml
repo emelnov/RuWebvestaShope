@@ -1,0 +1,10 @@
+commerce_ajax_atc:
+  version: VERSION
+  js:
+    js/commerce_ajax_atc.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupalSettings
+    - core/drupal.ajax
+    - colorbox/colorbox

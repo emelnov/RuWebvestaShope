@@ -1,0 +1,29 @@
+uuid: b2b297ca-6ad6-42c2-8cbf-c630dd9a16c7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.vesta_product
+    - field.storage.commerce_product.field_select_catalog
+    - taxonomy.vocabulary.catalog
+id: commerce_product.vesta_product.field_select_catalog
+field_name: field_select_catalog
+entity_type: commerce_product
+bundle: vesta_product
+label: 'Раздел каталога'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      catalog: catalog
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

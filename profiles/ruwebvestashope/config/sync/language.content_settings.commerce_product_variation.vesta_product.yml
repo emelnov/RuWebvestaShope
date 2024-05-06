@@ -1,0 +1,11 @@
+uuid: 30d3ca02-d5ec-40ee-b4ec-211b16a7e071
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.vesta_product
+id: commerce_product_variation.vesta_product
+target_entity_type_id: commerce_product_variation
+target_bundle: vesta_product
+default_langcode: site_default
+language_alterable: false

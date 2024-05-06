@@ -1,0 +1,126 @@
+uuid: b46d50e7-24fe-4b78-b03d-8f540851defa
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.commerce_product.body
+    - field.storage.commerce_product.field_select_catalog
+    - search_api.server.serversb
+  module:
+    - node
+    - commerce_product
+    - search_api
+id: indexdb
+name: indexdb
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:commerce_product'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product.body
+  field_select_catalog:
+    label: 'Раздел каталога'
+    datasource_id: 'entity:commerce_product'
+    property_path: field_select_catalog
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_select_catalog
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  number:
+    label: 'Вариации » Product variation » Цена » Число'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:price:number'
+    type: decimal
+    dependencies:
+      module:
+        - commerce_product
+  number_1:
+    label: 'Цена » Число'
+    datasource_id: 'entity:commerce_product_variation'
+    property_path: 'price:number'
+    type: string
+    dependencies:
+      module:
+        - commerce_product
+  title:
+    label: Заголовок
+    datasource_id: 'entity:commerce_product'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - commerce_product
+  title_1:
+    label: Заголовок
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Тип товара'
+    datasource_id: 'entity:commerce_product'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - commerce_product
+  variations:
+    label: Вариации
+    datasource_id: 'entity:commerce_product'
+    property_path: variations
+    type: integer
+    dependencies:
+      module:
+        - commerce_product
+datasource_settings:
+  'entity:commerce_product':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:commerce_product_variation':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: serversb

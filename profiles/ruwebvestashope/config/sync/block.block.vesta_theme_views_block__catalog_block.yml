@@ -1,0 +1,30 @@
+uuid: 69ee3d02-7b4a-4efa-896c-b3873cfc56ea
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.catalog
+  module:
+    - system
+    - views
+  theme:
+    - vesta_theme
+id: vesta_theme_views_block__catalog_block
+theme: vesta_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:catalog-block'
+settings:
+  id: 'views_block:catalog-block'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/catalog/*'

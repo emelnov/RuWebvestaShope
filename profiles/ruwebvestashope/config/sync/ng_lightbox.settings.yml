@@ -1,0 +1,8 @@
+_core:
+  default_config_hash: ySh6lmKUH2SCk5s532zkdNU9PeyNywkaFGVLbWBbRWY
+langcode: ru
+patterns: ''
+default_width: 700
+lightbox_class: ''
+skip_admin_paths: true
+renderer: null

@@ -1,0 +1,34 @@
+
+.ipless-ui {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  font: normal 1em/1em monospace;
+  color: #FFFFFF;
+  &.profiler-loaded { bottom: 39px; }
+  .handle {
+    background: #4a4a4a;
+    padding: 2px 5px;
+    cursor: pointer;
+
+    .status {
+      &.pause:before {
+        content: "\2225";
+      }
+
+      &.play:before {
+        content: "\27F3";
+      }
+      &.error:before {
+        content: "\2639";
+        color: orange;
+      }
+    }
+
+  }
+
+  .action-disabled {
+
+  }
+}

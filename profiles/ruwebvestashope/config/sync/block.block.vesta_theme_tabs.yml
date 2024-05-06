@@ -1,0 +1,20 @@
+uuid: cb19d06e-00fc-4a3b-958e-6d8e81ac793b
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - vesta_theme
+id: vesta_theme_tabs
+theme: vesta_theme
+region: content
+weight: -12
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

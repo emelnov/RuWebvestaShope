@@ -1,0 +1,21 @@
+uuid: 86594eac-ed13-4774-87e5-a6b3e756a9bb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.vesta_product
+    - field.storage.commerce_product_variation.weight
+  module:
+    - physical
+id: commerce_product_variation.vesta_product.weight
+field_name: weight
+entity_type: commerce_product_variation
+bundle: vesta_product
+label: Вес
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: physical_measurement

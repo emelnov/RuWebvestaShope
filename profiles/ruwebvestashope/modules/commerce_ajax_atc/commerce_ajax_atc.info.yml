@@ -1,0 +1,12 @@
+name: Commerce Ajax Add to Cart
+type: module
+description: Allows you to add products to the cart using ajax, and refeshes the block cart.
+package: Commerce (contrib)
+core_version_requirement: ^9.3 || ^10
+dependencies:
+  - commerce:commerce_cart
+
+# Information added by Drupal.org packaging script on 2024-01-29
+version: '1.0.0-rc2'
+project: 'commerce_ajax_atc'
+datestamp: 1706536484

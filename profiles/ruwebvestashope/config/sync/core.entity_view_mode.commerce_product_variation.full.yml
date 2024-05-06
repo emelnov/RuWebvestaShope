@@ -1,0 +1,11 @@
+uuid: daf47c67-bdab-4602-a9c3-8305b2881e03
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.full
+label: Full
+description: ''
+targetEntityType: commerce_product_variation
+cache: true

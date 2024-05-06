@@ -1,0 +1,77 @@
+uuid: a2af12e4-6704-4f02-ba7f-7664a6187f9a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.vesta_product
+    - core.entity_view_mode.commerce_product.full
+    - field.field.commerce_product.vesta_product.body
+    - field.field.commerce_product.vesta_product.field_image_product_view
+    - field.field.commerce_product.vesta_product.field_select_catalog
+  module:
+    - commerce_ajax_atc
+    - commerce_product
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      ds_content:
+        - title
+        - variations
+        - body
+id: commerce_product.vesta_product.full
+targetEntityType: commerce_product
+bundle: vesta_product
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: ds_content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+  variations:
+    type: commerce_add_to_cart
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings:
+      commerce_ajax_atc:
+        enable_ajax: true
+      ds:
+        ds_limit: ''
+    weight: 7
+    region: ds_content
+hidden:
+  created: true
+  field_image_product_view: true
+  field_select_catalog: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  uid: true

@@ -1,0 +1,21 @@
+uuid: 0c417269-40b2-4ab8-bcd4-fa0a938a8495
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide_title
+    - node.type.slide
+  module:
+    - text
+id: node.slide.field_slide_title
+field_name: field_slide_title
+entity_type: node
+bundle: slide
+label: 'Заголовок слайда'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

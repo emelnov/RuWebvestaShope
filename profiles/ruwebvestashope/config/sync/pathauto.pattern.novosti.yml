@@ -1,0 +1,22 @@
+uuid: b287703f-f07b-4966-b4d6-7ad2b6e305ee
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: novosti
+label: Новость
+type: 'canonical_entities:node'
+pattern: 'new/[node:title]'
+selection_criteria:
+  1ded3aa6-08d2-4bd7-9311-2a643a86ea64:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 1ded3aa6-08d2-4bd7-9311-2a643a86ea64
+    context_mapping:
+      node: node
+    bundles:
+      news: news
+selection_logic: and
+weight: -10
+relationships: {  }

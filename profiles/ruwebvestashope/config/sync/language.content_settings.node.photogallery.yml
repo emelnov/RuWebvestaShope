@@ -1,0 +1,11 @@
+uuid: c993274b-56e4-4f69-8337-c569295f10a7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.photogallery
+id: node.photogallery
+target_entity_type_id: node
+target_bundle: photogallery
+default_langcode: site_default
+language_alterable: false

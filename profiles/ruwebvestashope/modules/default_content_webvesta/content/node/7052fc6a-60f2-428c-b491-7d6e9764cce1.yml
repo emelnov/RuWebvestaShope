@@ -1,0 +1,44 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 7052fc6a-60f2-428c-b491-7d6e9764cce1
+  bundle: front
+  default_langcode: ru
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Главная страница'
+  created:
+    -
+      value: 1684525522
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Главная страница | Веста'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://default/glavnaya-stranica'
+  path:
+    -
+      alias: /glavnaya-stranica
+      langcode: ru
+      pathauto: 1

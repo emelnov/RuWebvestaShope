@@ -1,0 +1,20 @@
+uuid: baa34b0b-d5f6-46c5-895f-b8ead6cd8b35
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - bootstrap4
+_core:
+  default_config_hash: _0ZyPKUqcQMu9FlcCoa_Y-No4zdv-wUNF4hlSj60yi0
+id: bootstrap4_page_title
+theme: bootstrap4
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Заголовок страницы'
+  label_display: '0'
+  provider: core
+visibility: {  }

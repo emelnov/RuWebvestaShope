@@ -1,0 +1,75 @@
+<?php
+
+
+/**
+ * Implements hook_install().
+ */
+function webvesta_import_install() {
+    // Путь к папке с контентом относительно корня профиля
+    // $path = drupal_get_path('module', 'webvesta_import') . '/content';
+	
+	
+
+	// Используем $path_resolver для получения пути.
+	$path = \Drupal::service('extension.list.module')->getPath('webvesta_import');
+	
+    $content_directories = [\Drupal\Core\Site\Settings::get('default_content_directory') => $path];
+
+    foreach ($content_directories as $directory) {
+        // Проверяем, существует ли директория
+		echo $directory;
+		if (is_dir($directory)) {
+			$mask = '/.*\.json$/';
+		    $files = \Drupal::service('file_system')->scanDirectory($directory, $mask);
+            foreach ($files as $file) {
+                // Импортируем каждый файл
+                _webvesta_import_import_content_from_file($file->uri);
+            }
+		}
+		
+		
+    }
+}
+
+use Drupal\default_content\ImporterInterface;
+use Symfony\Component\Serializer\SerializerInterface;
+
+/**
+ * Helper function to import content from a given file.
+ */
+function _webvesta_import_import_content_from_file($file) {
+    $content = file_get_contents($file);
+	
+    $decoded = json_decode($content, TRUE);
+
+	// \Drupal::logger('webvesta_import')->info('Deserializing JSON: @json', ['@json' => $content]);
+	
+
+
+    $importer = \Drupal::service('default_content.importer');
+    $serializer = \Drupal::service('serializer');
+
+    foreach ($decoded as $data) {
+        $importer->importContentFromArray($data);
+    }
+
+	/*
+        $json_encoded_data = json_encode($decoded);
+        $entity = $serializer->deserialize($json_encoded_data, 'Drupal\block_content\Entity\BlockContent', 'json');
+		$importer->importContent($entity);
+		*/
+
+
+
+	/*
+    // Deserialize the content to the appropriate format.
+    foreach ($decoded as $data) {
+        $entity_type_id = key($data);
+        $entity_data = reset($data);
+        $entity = $serializer->deserialize(json_encode($entity_data), 'Drupal\block_content\Entity\BlockContent', 'json');
+        
+        // Import the content.
+        $importer->import($entity);
+    }
+	*/
+}

@@ -1,0 +1,13 @@
+uuid: 676b6d25-8ef4-4f94-9691-aada114e4d5d
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_order
+_core:
+  default_config_hash: hI6zHs0P9XxjpjIYYZxrfjMIf2F5sOACOkwiyD6zRp0
+id: commerce_order.checkout
+label: 'Оформление заказа'
+description: ''
+targetEntityType: commerce_order
+cache: true

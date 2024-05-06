@@ -1,0 +1,340 @@
+<?php
+
+/**
+ * @file
+ * Contains hooks for Commerce Ajax ATC.
+ */
+
+use Drupal\colorbox_load\OpenCommand;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\HtmlCommand;
+use Drupal\Core\Ajax\MessageCommand;
+use Drupal\Core\Ajax\OpenModalDialogCommand;
+use Drupal\Core\Ajax\ReplaceCommand;
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements commerce_ajax_atc_alter_submit helper function.
+ */
+function commerce_ajax_atc_alter_submit(&$form, $variation_id) {
+  $config = \Drupal::config('commerce_ajax_atc.settings');
+  $form['actions']['submit']['#ajax'] = [
+    'callback' => 'commerce_ajax_atc_form_submit',
+    // Prevent jump to top of page.
+    'disable-refocus' => TRUE,
+    'wrapper' => 'all_form',
+    'effect' => 'fade',
+    'progress' => [
+      'type' => 'throbber',
+      'message' => t('Adding to Cart'),
+    ],
+  ];
+  $form['add-to-cart-message-container'] = [
+    '#type' => 'container',
+    '#id' => 'add-to-cart-message-container-' . $variation_id,
+    '#attributes' => [
+      'class' => ['add-to-cart-message'],
+    ],
+  ];
+  if ($config->get('pop_up_type') === 'modal_dialog') {
+    $form['#attached']['library'][] = 'core/drupal.dialog.ajax';
+  }
+  elseif ($config->get('pop_up_type') === 'colorbox') {
+    $form['#attached']['library'][] = 'colorbox_load/colorbox_load';
+    $form['#attached']['library'][] = 'commerce_ajax_atc/commerce_ajax_atc';
+    $form['#attached']['drupalSettings']['commerce_ajax_atc']['colorbox']['width'] = $config->get('colorbox_width');
+    $form['#attached']['drupalSettings']['commerce_ajax_atc']['colorbox']['height'] = $config->get('colorbox_height');
+  }
+
+}
+
+/**
+ * Implements commerce_ajax_atc_get_variation_id helper function.
+ */
+function commerce_ajax_atc_get_variation_id(&$form, FormStateInterface $form_state) {
+  if (empty($form_state->get('selected_variation'))) {
+    $variation_id = $form_state->getFormObject()->getEntity()->getPurchasedEntity()->id();
+  }
+  else {
+    $variation_id = $form_state->get('selected_variation');
+  }
+  return $variation_id;
+}
+
+/**
+ * Implements hook_field_formatter_settings_summary_alter().
+ */
+function commerce_ajax_atc_field_formatter_settings_summary_alter(&$summary, $context) {
+  // Append a message to the summary when commerce_add_to_cart has
+  // enable_ajax set to TRUE for the current view mode.
+  $plugin_id = $context['formatter']->getPluginId();
+  if ($plugin_id == 'commerce_add_to_cart' || $plugin_id == 'commerce_vado_group_add_to_cart') {
+    if ($context['formatter']->getThirdPartySetting('commerce_ajax_atc', 'enable_ajax')) {
+      $summary[] = t('Ajax is enabled for this add to cart form.');
+    }
+  }
+
+}
+
+/**
+ * Implements hook_field_formatter_third_party_settings_form_alter().
+ */
+function commerce_ajax_atc_field_formatter_third_party_settings_form($plugin, $field_definition, $view_mode, $form, $form_state) {
+  $element = [];
+  // Add a 'enable_ajax' checkbox to the'commerce_add_to_cart' field formatters.
+  $plugin_id = $plugin->getPluginId();
+  if ($plugin_id == 'commerce_add_to_cart' || $plugin_id == 'commerce_vado_group_add_to_cart') {
+    $element['enable_ajax'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Enable Ajax'),
+      '#description' => t('Enable Ajax for this add to cart form.'),
+      '#default_value' => $plugin
+        ->getThirdPartySetting('commerce_ajax_atc', 'enable_ajax'),
+    ];
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function commerce_ajax_atc_form_commerce_order_item_add_to_cart_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Get the product entity in the form storage.
+  $form_data = $form_state->getStorage();
+  /** @var \Drupal\commerce_product\Entity\ProductInterface $product */
+  $product = $form_data['product'];
+  // Grab the view mode third party settings.
+  $display = EntityViewDisplay::collectRenderDisplay($product, $form_data['view_mode']);
+  $component = $display->getComponent('variations');
+  if ($component && !empty($component['third_party_settings']['commerce_ajax_atc'])) {
+    $settings = $component['third_party_settings']['commerce_ajax_atc'];
+    // Add ajax to the add to cart form.
+    if (!empty($settings['enable_ajax'])) {
+      $variation_id = commerce_ajax_atc_get_variation_id($form, $form_state);
+      commerce_ajax_atc_alter_submit($form, $variation_id);
+    }
+  }
+
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function commerce_ajax_atc_form_commerce_order_item_vado_group_add_to_cart_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $module_exists = \Drupal::moduleHandler()->moduleExists('commerce_vado');
+  if (!$module_exists) {
+    return;
+  }
+  // Get the product entity in the form storage.
+  $form_data = $form_state->getStorage();
+  /** @var \Drupal\commerce_product\Entity\ProductInterface $product */
+  $product = $form_data['product'];
+  // Grab the view mode third party settings.
+  $display = EntityViewDisplay::collectRenderDisplay($product, $form_data['view_mode']);
+  $component = $display->getComponent('variations');
+  if ($component && !empty($component['third_party_settings']['commerce_ajax_atc'])) {
+    $settings = $component['third_party_settings']['commerce_ajax_atc'];
+    // Add ajax to the add to cart form.
+    if (!empty($settings['enable_ajax'])) {
+      $variation_id = commerce_ajax_atc_get_variation_id($form, $form_state);
+      commerce_ajax_atc_alter_submit($form, $variation_id);
+    }
+  }
+
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function commerce_ajax_atc_form_commerce_order_item_variation_cart_form_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $module_exists = \Drupal::moduleHandler()->moduleExists('commerce_variation_cart_form');
+  if (!$module_exists) {
+    return;
+  }
+  $config = \Drupal::config('commerce_ajax_atc.settings');
+  if ($config->get('enable_variation_cart_form_ajax')) {
+    $variation_id = commerce_ajax_atc_get_variation_id($form, $form_state);
+    commerce_ajax_atc_alter_submit($form, $variation_id);
+  }
+
+}
+
+/**
+ * Ajax callback for variation product form.
+ *
+ * @param array $form
+ *   The form array.
+ * @param Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state.
+ *
+ * @return Drupal\Core\Ajax\AjaxResponse
+ *   The AJAX response.
+ */
+function commerce_ajax_atc_form_submit(array $form, FormStateInterface &$form_state) {
+  $config = \Drupal::config('commerce_ajax_atc.settings');
+  $purchased_entity = $form_state->getFormObject()->getEntity()->getPurchasedEntity();
+  $render_selector = '.cart--cart-block';
+  // Get html of cart block.
+  $html = commerce_ajax_atc_render_cart_block();
+  $response = new AjaxResponse();
+  if (!$form_state->getErrors()) {
+    // Update block cart after add an item to cart.
+    $response->addCommand(new HtmlCommand($render_selector, $html));
+  }
+
+  $title = $config->get('ajax_modal_title');
+  // Create our buttons for modal and colorbox content.
+  $include_cart_button = (bool) $config->get('include_cart_button');
+  $include_close_button = (bool) $config->get('include_close_button');
+  $include_checkout_button = (bool) $config->get('include_checkout_button');
+  $include_buttons = $include_cart_button || $include_close_button || $include_checkout_button;
+  $view_cart_button = NULL;
+  if ($include_cart_button) {
+    $view_cart_button = t('<a class="button button--primary" href=":url">@cart_button_text</a>', [
+      ':url' => Url::fromRoute('commerce_cart.page')->toString(),
+      '@cart_button_text' => $config->get('cart_button_text') ?: t('View cart'),
+    ]);
+  }
+  $checkout_button = NULL;
+  if ($include_checkout_button) {
+    $checkout_button = t('<a class="button button--secondary" href=":url">@checkout_button_text</a>', [
+      // @todo figure out if i need the step for the route.
+      ':url' => Url::fromRoute('commerce_checkout.checkout')->toString(),
+      '@checkout_button_text' => $config->get('checkout_button_text') ?: t('Checkout'),
+    ]);
+  }
+  $close_button = NULL;
+  if ($include_close_button) {
+    $close_button = t('<a class="use-ajax button button--secondary" href=":url">@close_button_text</a>', [
+      ':url' => Url::fromRoute('commerce_ajax_atc.closeModal')->toString(),
+      '@close_button_text' => $config->get('close_button_text') ?: t('Continue shopping'),
+    ]);
+  }
+  // The success message.
+  $message_text = str_replace('[variation_title]', $purchased_entity->label(), $config->get('success_message'));
+  $url_text = str_replace('[none]', '', $config->get('cart_link_text'));
+  $success_message = t('@message <a href=":url">@text</a>', [
+    '@message' => $message_text ?: t('@entity added to', [
+      '@entity' => $purchased_entity->label(),
+    ]),
+    ':url' => Url::fromRoute('commerce_cart.page')->toString(),
+    '@text' => $config->get('cart_link_text') ? $url_text : t('your cart'),
+  ]);
+  // Our content if the twig template is enabled.
+  if ($config->get('use_twig_template')) {
+    // Use the view mode if it's enabled.
+    $view_builder = \Drupal::entityTypeManager()->getViewBuilder('commerce_product_variation');
+    $product_variation = $view_builder->view($purchased_entity, 'commerce_ajax_atc_popup');
+    $content = [
+      '#theme' => 'commerce_ajax_atc_popup',
+      '#product_variation' => $product_variation,
+      '#product_variation_entity' => $purchased_entity,
+      '#success_message' => $success_message,
+      '#cart_url' => Url::fromRoute('commerce_cart.page')->toString(),
+      '#include_buttons' => $include_buttons,
+      '#cart_link_text' => $config->get('cart_link_text') ?: t('your cart.'),
+      '#view_cart_button' => $view_cart_button,
+      '#checkout_button' => $checkout_button,
+      '#close_button' => $close_button,
+    ];
+  }
+  // Our content if the twig template is NOT enabled.
+  else {
+    $content = [
+      'message' => [
+        '#markup' => $success_message,
+      ],
+      'buttons' => [
+        '#type' => 'actions',
+        '#attributes' => [
+          'class' => [
+            'form-actions',
+          ],
+        ],
+        '#access' => $include_buttons,
+        'view-cart' => [
+          '#markup' => $view_cart_button,
+        ],
+        'checkout' => [
+          '#markup' => $checkout_button,
+        ],
+        'modal-close' => [
+          '#markup' => $close_button,
+        ],
+      ],
+    ];
+  }
+  $options = [
+    'width' => $config->get('ajax_modal_width'),
+    'height' => $config->get('ajax_modal_height'),
+  ];
+
+  $variation_id = commerce_ajax_atc_get_variation_id($form, $form_state);
+  // Check for errors, and display messages.
+  if ($form_state->hasAnyErrors()) {
+    $response->addCommand(new ReplaceCommand('#add-to-cart-message-container-' . $variation_id, [
+      '#type' => 'status_messages',
+      '#weight' => -1000,
+    ]));
+  }
+  // Add the Command for the selected pop-up type.
+  if (!$form_state->hasAnyErrors()) {
+    if ($config->get('pop_up_type') === 'non_modal') {
+      $response->addCommand(new MessageCommand($success_message, '#add-to-cart-message-container-' . $variation_id));
+    }
+    elseif ($config->get('pop_up_type') === 'modal_dialog') {
+      $response->addCommand(new OpenModalDialogCommand($title, $content, $options));
+    }
+    elseif ($config->get('pop_up_type') === 'colorbox') {
+      $rendered_content = \Drupal::service('renderer')->renderRoot($content);
+      $response->setAttachments($content['#attached']);
+      $response->addCommand(new OpenCommand($rendered_content));
+    }
+  }
+
+  return $response;
+}
+
+/**
+ * Render HTML of cart block.
+ *
+ * @return string
+ *   A render text.
+ */
+function commerce_ajax_atc_render_cart_block() {
+  $entity_type_manager = \Drupal::entityTypeManager();
+  $block_storage = $entity_type_manager->getStorage('block');
+  /** @var \Drupal\block\Entity\Block[] $cart_blocks */
+  $cart_blocks = $block_storage->loadByProperties(['plugin' => 'commerce_cart']);
+  if (count($cart_blocks) == 0) {
+    return '';
+  }
+  $cart_block = reset($cart_blocks);
+  $build = $cart_block->getPlugin()->build();
+
+  return \Drupal::service('renderer')->render($build);
+}
+
+/**
+ * Implements hook_theme().
+ */
+function commerce_ajax_atc_theme($existing, $type, $theme, $path) {
+  return [
+    'commerce_ajax_atc_popup' => [
+      'variables' => [
+        'product_variation' => NULL,
+        'product_variation_entity' => NULL,
+        'success_message' => NULL,
+        'cart_url' => NULL,
+        'include_buttons' => NULL,
+        'cart_link_text' => NULL,
+        'view_cart_button' => NULL,
+        'checkout_button' => NULL,
+        'close_button' => NULL,
+      ],
+    ],
+  ];
+}

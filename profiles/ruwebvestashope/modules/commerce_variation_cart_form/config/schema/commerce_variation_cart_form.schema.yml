@@ -1,0 +1,6 @@
+core.entity_view_display.*.*.*.third_party.commerce_variation_cart_form:
+  type: mapping
+  mapping:
+    combine:
+      type: boolean
+      label: "Whether to combine order items containing the same product variation."

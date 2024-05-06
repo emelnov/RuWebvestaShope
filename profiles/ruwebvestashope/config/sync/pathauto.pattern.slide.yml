@@ -1,0 +1,22 @@
+uuid: 50966582-55e6-425a-bceb-ac04aa6a54ec
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: slide
+label: Слайд
+type: 'canonical_entities:node'
+pattern: 'slide/[node:title]'
+selection_criteria:
+  9fdcb107-f6a0-482a-886f-e4f82cd52a64:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 9fdcb107-f6a0-482a-886f-e4f82cd52a64
+    context_mapping:
+      node: node
+    bundles:
+      slide: slide
+selection_logic: and
+weight: -4
+relationships: {  }

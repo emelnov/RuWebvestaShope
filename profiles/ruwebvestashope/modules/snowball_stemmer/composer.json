@@ -1,0 +1,12 @@
+{
+    "name": "drupal/snowball_stemmer",
+    "description": "Snowball stemmer service and processor plugin for Search API",
+    "type": "drupal-module",
+    "license": "GPL-2.0",
+    "require": {
+        "wamania/php-stemmer": "^2.0 || ^3.0"
+    },
+    "require-dev": {
+        "drupal/search_api": "^1.30"
+    }
+}

@@ -1,0 +1,20 @@
+uuid: f8c2a45b-c4b7-45c6-b4a7-a03b4f5e10d8
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - bootstrap4
+_core:
+  default_config_hash: rKurRLaH08AjwE5wsNzeL2fa77rF5pXKSR9WopsFYyI
+id: bootstrap4_local_actions
+theme: bootstrap4
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Основные действия администратора'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: e629efa3-5d37-42c7-9daa-7b62609fda20
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.catalog
+  module:
+    - system
+    - views
+  theme:
+    - vesta_theme
+id: vesta_theme_views_block__catalog_block_front
+theme: vesta_theme
+region: services
+weight: 0
+provider: null
+plugin: 'views_block:catalog-block_front'
+settings:
+  id: 'views_block:catalog-block_front'
+  label: Каталог
+  label_display: visible
+  provider: views
+  views_label: Каталог
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

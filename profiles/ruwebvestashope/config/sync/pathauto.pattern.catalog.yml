@@ -1,0 +1,22 @@
+uuid: 71101af6-4ed8-40fe-995b-78fd2c3bb923
+langcode: ru
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: catalog
+label: Каталог
+type: 'canonical_entities:taxonomy_term'
+pattern: 'catalog/[term:name]'
+selection_criteria:
+  9cbdba38-31e6-47ee-a2d5-43a6295b260e:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 9cbdba38-31e6-47ee-a2d5-43a6295b260e
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      catalog: catalog
+selection_logic: and
+weight: 1
+relationships: {  }

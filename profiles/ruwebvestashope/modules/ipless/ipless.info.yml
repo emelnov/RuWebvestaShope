@@ -1,0 +1,12 @@
+name: Simple Less
+type: module
+description: 'Simple Less css compilation.'
+core_version_requirement: ^9.4 || ^10
+package: Other
+
+configure: system.performance_settings
+
+# Information added by Drupal.org packaging script on 2024-04-16
+version: '4.0.2'
+project: 'ipless'
+datestamp: 1713285672

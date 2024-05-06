@@ -1,0 +1,21 @@
+uuid: 18bbdfc8-b5ae-4174-956f-4036d35feec5
+langcode: ru
+status: true
+dependencies:
+  config:
+    - search_api.index.index_full
+id: search
+label: Поиск
+path: search
+clean_url: true
+show_all_when_no_keys: false
+index: index_full
+limit: 10
+searched_fields:
+  title: title
+  title_1: title_1
+  title_2: title_2
+style: search_results
+view_mode_configuration: {  }
+show_search_form: true
+parse_mode: direct

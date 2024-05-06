@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: c943f347-a31b-4143-98f8-6cc9e0be1963
+  bundle: basic
+  default_langcode: ru
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: Копирайт
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Веста'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://default/glavnaya-stranica'
+  body:
+    -
+      value: "<div class=\"copyright\">\r\n        <p class=\"privacy-content\"><span>Все права защищены &copy; <?php echo date(\"Y\"); ?></span><a href=\"/politika-konfidencialnosti\" class=\"privacy\">Политика конфиденциальности</a></p>\r\n</div>"
+      format: php
+      summary: ''

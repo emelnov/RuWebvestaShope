@@ -1,0 +1,15 @@
+uuid: 1767bfc0-02e6-461a-a286-a2db2601512c
+langcode: ru
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: serversb
+name: serverdb
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  matching: partial
+  phrase: disabled

@@ -1,0 +1,19 @@
+uuid: fb63d32b-0bc6-4df2-add8-3d4b77cf84a7
+langcode: ru
+status: true
+dependencies:
+  module:
+    - address
+    - commerce_order
+id: commerce_order.field_address
+field_name: field_address
+entity_type: commerce_order
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

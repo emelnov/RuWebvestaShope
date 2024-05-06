@@ -1,0 +1,26 @@
+uuid: b2203c85-702a-48de-8bad-3177f2d4a86e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.gallery_page
+  module:
+    - views
+  theme:
+    - vesta_theme
+id: vesta_theme_views_block__gallery_page_block_1
+theme: vesta_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:gallery_page-block_1'
+settings:
+  id: 'views_block:gallery_page-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping:
+    nid: '@node.node_route_context:node'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

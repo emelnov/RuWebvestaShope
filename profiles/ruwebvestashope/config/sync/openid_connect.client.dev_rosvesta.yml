@@ -1,0 +1,18 @@
+uuid: 59c0d7c0-dc69-4a17-8712-f15767166dfc
+langcode: ru
+status: true
+dependencies: {  }
+id: dev_rosvesta
+label: dev.rosvesta
+plugin: generic
+settings:
+  client_id: dev.rosvesta
+  client_secret: dev.rosvesta
+  iss_allowed_domains: dev.rosvesta.ru
+  issuer_url: ''
+  authorization_endpoint: 'https://dev.rosvesta.ru/oauth2/authorize'
+  token_endpoint: 'https://dev.rosvesta.ru/oauth2/token'
+  userinfo_endpoint: 'https://dev.rosvesta.ru/oauth2/userinfo'
+  end_session_endpoint: ''
+  scopes:
+    - openid

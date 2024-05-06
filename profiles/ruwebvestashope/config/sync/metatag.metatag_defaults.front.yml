@@ -1,0 +1,18 @@
+uuid: 389fb8f7-a5e1-474f-a03e-7bf697d7dfec
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  canonical_url: '[site:url]'
+  description: '[site:slogan]'
+  og_description: '[site:slogan]'
+  og_site_name: '[site:name]'
+  og_title: '[current-page:title] '
+  og_type: website
+  og_url: '[current-page:url:absolute]'
+  shortlink: '[site:url]'
+  title: '[current-page:title] | [site:name]'

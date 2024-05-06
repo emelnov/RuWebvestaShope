@@ -1,0 +1,19 @@
+uuid: e4f9452a-ce45-4bdc-9941-4b8528f6ec23
+langcode: ru
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: rFmJFwAa3GmCj_2CvSbx5Hk1-25oBQ7fkZNUOBVjexI
+name: product_gallery_box
+label: 'Product gallery box (800x700)'
+effects:
+  e19cc32e-5d1b-4f07-a8b3-bf839429ff07:
+    uuid: e19cc32e-5d1b-4f07-a8b3-bf839429ff07
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 800
+      height: 700
+      crop_type: focal_point

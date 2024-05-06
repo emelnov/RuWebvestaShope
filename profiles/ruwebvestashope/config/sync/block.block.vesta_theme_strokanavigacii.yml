@@ -1,0 +1,20 @@
+uuid: ccb47172-31b7-46e5-b3ad-cbe95ba53aae
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vesta_theme
+id: vesta_theme_strokanavigacii
+theme: vesta_theme
+region: content
+weight: -11
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Строка навигации'
+  label_display: '0'
+  provider: system
+visibility: {  }

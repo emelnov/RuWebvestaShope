@@ -1,0 +1,28 @@
+services:
+  cmlapi.cml:
+    class: Drupal\cmlapi\Service\CmlService
+    arguments: ["@config.factory", "@entity_type.manager"]
+  cmlapi.cleaner:
+    class: Drupal\cmlapi\Service\CmlCleaner
+    arguments: ["@config.factory", "@entity_type.manager"]
+  cmlapi.xml_parser:
+    class: Drupal\cmlapi\Service\XmlParser
+    arguments: []
+  cmlapi.parser_catalog:
+    class: Drupal\cmlapi\Service\ParserCatalog
+    arguments: ["@cmlapi.cml", "@cmlapi.xml_parser"]
+  cmlapi.parser_product:
+    class: Drupal\cmlapi\Service\ParserProduct
+    arguments: ["@cmlapi.cml", "@cmlapi.xml_parser"]
+  cmlapi.parser_offers:
+    class: Drupal\cmlapi\Service\ParserOffers
+    arguments: ["@cmlapi.cml", "@cmlapi.xml_parser"]
+  cmlapi.parser_prices:
+    class: Drupal\cmlapi\Service\ParserPrices
+    arguments: ["@cmlapi.cml", "@cmlapi.xml_parser"]
+  cmlapi.parser_rests:
+    class: Drupal\cmlapi\Service\ParserRests
+    arguments: ["@cmlapi.cml", "@cmlapi.xml_parser"]
+  cmlapi.scheme:
+    class: Drupal\cmlapi\Service\Scheme
+    arguments: ["@cmlapi.parser_catalog", "@cmlapi.xml_parser"]

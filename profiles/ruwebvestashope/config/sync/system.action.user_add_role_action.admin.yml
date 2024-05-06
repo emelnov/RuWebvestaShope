@@ -1,0 +1,14 @@
+uuid: 9931a473-62cc-4785-b49f-ead8040bd579
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.admin
+  module:
+    - user
+id: user_add_role_action.admin
+label: 'Добавьте роль Админ выбранным пользователям'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: admin

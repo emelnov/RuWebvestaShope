@@ -1,0 +1,56 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: d6ccc307-b3df-47d4-a6b7-15a2ab6d1484
+  bundle: catalog
+  default_langcode: ru
+  depends:
+    93f860e1-9498-4bec-985e-e503d15706f6: file
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: Категория
+  description:
+    -
+      value: '<p>Описание категории</p>'
+      format: full_html
+  weight:
+    -
+      value: 1
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Категория | Веста'
+    -
+      tag: meta
+      attributes:
+        name: description
+        content: 'Описание категории'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://default/catalog/kategoriya'
+  path:
+    -
+      alias: /catalog/kategoriya
+      langcode: ru
+      pathauto: 1
+  field_catalog_image:
+    -
+      entity: 93f860e1-9498-4bec-985e-e503d15706f6
+      alt: 'Категория 1'
+      title: ''
+      width: 574
+      height: 574

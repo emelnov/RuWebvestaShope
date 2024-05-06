@@ -1,0 +1,338 @@
+uuid: 54933c56-1809-4b0e-a6b7-ca19b2fcd17e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - feeds.feed_type.1c_feed
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.about
+    - node.type.article
+    - node.type.front
+    - node.type.news
+    - node.type.page
+    - node.type.photogallery
+    - node.type.slide
+    - node.type.webform
+    - taxonomy.vocabulary.brand
+    - taxonomy.vocabulary.catalog
+    - taxonomy.vocabulary.product_options
+    - taxonomy.vocabulary.tags
+  module:
+    - additional_field
+    - admin_toolbar_search
+    - block
+    - block_content
+    - captcha
+    - comment
+    - commerce
+    - commerce_email
+    - commerce_number_pattern
+    - commerce_order
+    - commerce_product
+    - commerce_promotion
+    - commerce_shipping
+    - commerce_store
+    - consumers
+    - contact
+    - contextual
+    - entity_reference_revisions
+    - externalauth
+    - feeds
+    - feeds_log
+    - file
+    - media
+    - node
+    - path
+    - phpmailer_smtp
+    - profile
+    - recaptcha
+    - simple_sitemap_engines
+    - system
+    - taxonomy
+    - toolbar
+    - tvi
+    - webform
+    - webform_node
+id: admin
+label: Админ
+weight: 4
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access block library'
+  - 'access commerce administration pages'
+  - 'access commerce_order overview'
+  - 'access commerce_product overview'
+  - 'access commerce_product_attribute overview'
+  - 'access commerce_promotion overview'
+  - 'access commerce_shipping_method overview'
+  - 'access commerce_store overview'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access feed overview'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access profile overview'
+  - 'access site in maintenance mode'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'add commerce_log commerce_order admin comment'
+  - 'add consumer entities'
+  - additional_info
+  - 'administer CAPTCHA settings'
+  - 'administer block content'
+  - 'administer blocks'
+  - 'administer comments'
+  - 'administer commerce_email'
+  - 'administer commerce_number_pattern'
+  - 'administer contact forms'
+  - 'administer menu'
+  - 'administer phpmailer smtp settings'
+  - 'administer profile types'
+  - 'administer recaptcha'
+  - 'administer site configuration'
+  - 'administer taxonomy'
+  - 'administer url aliases'
+  - 'administer users'
+  - 'bulk generate commerce_promotion_coupon'
+  - 'change own username'
+  - 'create about content'
+  - 'create article content'
+  - 'create audio media'
+  - 'create basic block content'
+  - 'create commerce_product_attribute'
+  - 'create commerce_promotion'
+  - 'create commerce_shipping_method'
+  - 'create customer profile'
+  - 'create default commerce_order'
+  - 'create document media'
+  - 'create front content'
+  - 'create image media'
+  - 'create media'
+  - 'create news content'
+  - 'create online commerce_store'
+  - 'create page content'
+  - 'create photogallery content'
+  - 'create remote_video media'
+  - 'create slide content'
+  - 'create terms in brand'
+  - 'create terms in catalog'
+  - 'create terms in product_options'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'create vesta_product commerce_product'
+  - 'create video media'
+  - 'create webform'
+  - 'create webform content'
+  - 'define view for terms in brand'
+  - 'define view for terms in catalog'
+  - 'define view for terms in product_options'
+  - 'define view for terms in tags'
+  - 'define view for vocabulary brand'
+  - 'define view for vocabulary catalog'
+  - 'define view for vocabulary product_options'
+  - 'define view for vocabulary tags'
+  - 'delete about revisions'
+  - 'delete all revisions'
+  - 'delete any about content'
+  - 'delete any article content'
+  - 'delete any audio media'
+  - 'delete any audio media revisions'
+  - 'delete any basic block content'
+  - 'delete any basic block content revisions'
+  - 'delete any commerce_promotion'
+  - 'delete any customer profile'
+  - 'delete any document media'
+  - 'delete any document media revisions'
+  - 'delete any file'
+  - 'delete any front content'
+  - 'delete any image media'
+  - 'delete any image media revisions'
+  - 'delete any media'
+  - 'delete any news content'
+  - 'delete any online commerce_store'
+  - 'delete any page content'
+  - 'delete any photogallery content'
+  - 'delete any remote_video media'
+  - 'delete any remote_video media revisions'
+  - 'delete any slide content'
+  - 'delete any vesta_product commerce_product'
+  - 'delete any video media'
+  - 'delete any video media revisions'
+  - 'delete any webform'
+  - 'delete any webform content'
+  - 'delete any webform submission'
+  - 'delete article revisions'
+  - 'delete authmap'
+  - 'delete commerce_product_attribute'
+  - 'delete commerce_shipping_method'
+  - 'delete default commerce_order'
+  - 'delete front revisions'
+  - 'delete media'
+  - 'delete news revisions'
+  - 'delete orphan revisions'
+  - 'delete own about content'
+  - 'delete own article content'
+  - 'delete own audio media'
+  - 'delete own commerce_promotion'
+  - 'delete own consumer entities'
+  - 'delete own customer profile'
+  - 'delete own document media'
+  - 'delete own front content'
+  - 'delete own image media'
+  - 'delete own news content'
+  - 'delete own online commerce_store'
+  - 'delete own page content'
+  - 'delete own photogallery content'
+  - 'delete own remote_video media'
+  - 'delete own slide content'
+  - 'delete own vesta_product commerce_product'
+  - 'delete own video media'
+  - 'delete own webform'
+  - 'delete own webform content'
+  - 'delete own webform submission'
+  - 'delete page revisions'
+  - 'delete photogallery revisions'
+  - 'delete slide revisions'
+  - 'delete terms in brand'
+  - 'delete terms in catalog'
+  - 'delete terms in product_options'
+  - 'delete terms in tags'
+  - 'delete webform revisions'
+  - 'delete webform submissions any node'
+  - 'delete webform submissions own node'
+  - 'duplicate any commerce_promotion'
+  - 'duplicate any online commerce_store'
+  - 'duplicate own commerce_promotion'
+  - 'duplicate own online commerce_store'
+  - 'edit any about content'
+  - 'edit any article content'
+  - 'edit any audio media'
+  - 'edit any basic block content'
+  - 'edit any document media'
+  - 'edit any front content'
+  - 'edit any image media'
+  - 'edit any news content'
+  - 'edit any page content'
+  - 'edit any photogallery content'
+  - 'edit any remote_video media'
+  - 'edit any slide content'
+  - 'edit any video media'
+  - 'edit any webform'
+  - 'edit any webform content'
+  - 'edit any webform submission'
+  - 'edit own about content'
+  - 'edit own article content'
+  - 'edit own audio media'
+  - 'edit own comments'
+  - 'edit own document media'
+  - 'edit own front content'
+  - 'edit own image media'
+  - 'edit own news content'
+  - 'edit own page content'
+  - 'edit own photogallery content'
+  - 'edit own remote_video media'
+  - 'edit own slide content'
+  - 'edit own video media'
+  - 'edit own webform'
+  - 'edit own webform content'
+  - 'edit own webform submission'
+  - 'edit terms in brand'
+  - 'edit terms in catalog'
+  - 'edit terms in product_options'
+  - 'edit terms in tags'
+  - 'edit webform submissions any node'
+  - 'edit webform submissions own node'
+  - feeds_log.access
+  - 'import 1c_feed feeds'
+  - 'import own 1c_feed feeds'
+  - 'index entity on save'
+  - 'manage default commerce_order_item'
+  - 'manage default commerce_shipment'
+  - 'manage vesta_product commerce_product_variation'
+  - 'revert about revisions'
+  - 'revert all revisions'
+  - 'revert any audio media revisions'
+  - 'revert any basic block content revisions'
+  - 'revert any document media revisions'
+  - 'revert any image media revisions'
+  - 'revert any remote_video media revisions'
+  - 'revert any video media revisions'
+  - 'revert article revisions'
+  - 'revert front revisions'
+  - 'revert news revisions'
+  - 'revert page revisions'
+  - 'revert photogallery revisions'
+  - 'revert slide revisions'
+  - 'revert webform revisions'
+  - 'schedule_import 1c_feed feeds'
+  - 'schedule_import own 1c_feed feeds'
+  - 'select account cancellation method'
+  - 'skip CAPTCHA'
+  - 'unlock 1c_feed feeds'
+  - 'unlock own 1c_feed feeds'
+  - 'update 1c_feed feeds'
+  - 'update any commerce_promotion'
+  - 'update any customer profile'
+  - 'update any media'
+  - 'update any online commerce_store'
+  - 'update any vesta_product commerce_product'
+  - 'update commerce_product_attribute'
+  - 'update commerce_shipping_method'
+  - 'update default commerce_order'
+  - 'update media'
+  - 'update own 1c_feed feeds'
+  - 'update own commerce_promotion'
+  - 'update own consumer entities'
+  - 'update own customer profile'
+  - 'update own online commerce_store'
+  - 'update own vesta_product commerce_product'
+  - 'use admin toolbar search'
+  - 'view 1c_feed feeds'
+  - 'view about revisions'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view any audio media revisions'
+  - 'view any basic block content history'
+  - 'view any customer profile'
+  - 'view any document media revisions'
+  - 'view any image media revisions'
+  - 'view any profile'
+  - 'view any remote_video media revisions'
+  - 'view any video media revisions'
+  - 'view any webform submission'
+  - 'view article revisions'
+  - 'view authmap'
+  - 'view commerce_order'
+  - 'view commerce_product_attribute'
+  - 'view commerce_promotion'
+  - 'view commerce_shipping_method'
+  - 'view commerce_store'
+  - 'view default commerce_order'
+  - 'view front revisions'
+  - 'view news revisions'
+  - 'view online commerce_store'
+  - 'view own 1c_feed feeds'
+  - 'view own consumer entities'
+  - 'view own customer profile'
+  - 'view own profile'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view own unpublished profile'
+  - 'view own webform submission'
+  - 'view page revisions'
+  - 'view photogallery revisions'
+  - 'view slide revisions'
+  - 'view the administration theme'
+  - 'view user email addresses'
+  - 'view vesta_product commerce_product'
+  - 'view webform revisions'
+  - 'view webform submissions any node'
+  - 'view webform submissions own node'

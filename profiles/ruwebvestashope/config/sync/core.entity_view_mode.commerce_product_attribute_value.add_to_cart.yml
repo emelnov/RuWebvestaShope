@@ -1,0 +1,13 @@
+uuid: 62fbf85c-7bed-43aa-b6d9-f9f57bb562f9
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+_core:
+  default_config_hash: ry5RvX-mOnp2GQWzMqSYjPz-jKfP1nSo4Xo4kJCodlE
+id: commerce_product_attribute_value.add_to_cart
+label: 'Форма добавления в корзину'
+description: ''
+targetEntityType: commerce_product_attribute_value
+cache: true

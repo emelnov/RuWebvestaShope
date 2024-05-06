@@ -1,0 +1,72 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: e6699527-b681-49db-8f9b-61db8212382f
+  bundle: slide
+  default_langcode: ru
+  depends:
+    4bb4df52-2c2b-4319-aa28-3c5b10bd4865: file
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Первый слайд'
+  created:
+    -
+      value: 1685959636
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Первый слайд | Веста'
+    -
+      tag: meta
+      attributes:
+        name: description
+        content: 'Текст первого слайда'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://default/slide/pervyy-slayd'
+  path:
+    -
+      alias: /slide/pervyy-slayd
+      langcode: ru
+      pathauto: 1
+  body:
+    -
+      value: '<p>Текст первого слайда</p>'
+      format: basic_html
+      summary: ''
+  field_image:
+    -
+      entity: 4bb4df52-2c2b-4319-aa28-3c5b10bd4865
+      alt: 'первый слайд'
+      title: ''
+      width: 1920
+      height: 574
+  field_slide_link:
+    -
+      uri: 'internal:/'
+      title: Подробнее
+      options: {  }
+  field_slide_title:
+    -
+      value: '<p>Первый слайд</p>'
+      format: basic_html

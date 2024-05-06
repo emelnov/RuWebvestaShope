@@ -1,0 +1,19 @@
+uuid: c783bd77-ddfd-4490-8742-0ed277d6abce
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.front.body
+    - node.type.front
+  module:
+    - user
+id: node.front.default
+targetEntityType: node
+bundle: front
+mode: default
+content: {  }
+hidden:
+  body: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: 62e91443-6200-4501-b479-28107039e485
+langcode: ru
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: IWpqzc_XLWVeWPgdyx0nG_PkgL5oNpEJCajJuP-Lpg0
+name: product_teaser_big
+label: 'Product Teaser Big [286x280]'
+effects:
+  093535d5-9742-4f51-9fe6-213449308939:
+    uuid: 093535d5-9742-4f51-9fe6-213449308939
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 572
+      height: 560
+      crop_type: focal_point

@@ -1,0 +1,11 @@
+uuid: 54643bd6-61cc-491e-a5de-e569f9259ee5
+langcode: ru
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.token
+label: Token
+description: ''
+targetEntityType: block_content
+cache: true

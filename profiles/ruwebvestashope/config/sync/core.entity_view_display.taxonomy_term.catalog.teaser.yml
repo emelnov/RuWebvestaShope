@@ -1,0 +1,71 @@
+uuid: fccb5c34-1d95-460d-9541-256794c453a3
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.teaser
+    - field.field.taxonomy_term.catalog.field_catalog_image
+    - image.style.large
+    - taxonomy.vocabulary.catalog
+  module:
+    - ds
+    - svg_image
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      ds_content:
+        - field_catalog_image
+        - taxonomy_term_title
+    fields:
+      taxonomy_term_title:
+        plugin_id: taxonomy_term_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          'link class': ''
+          link_target: ''
+          wrapper: h2
+          class: ''
+_core:
+  default_config_hash: KCmdeFZxdreWio2xaSIWDXrTHOILeDjIt1FYtlOY36w
+id: taxonomy_term.catalog.teaser
+targetEntityType: taxonomy_term
+bundle: catalog
+mode: teaser
+content:
+  field_catalog_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: large
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  description: true
+  langcode: true
+  search_api_excerpt: true

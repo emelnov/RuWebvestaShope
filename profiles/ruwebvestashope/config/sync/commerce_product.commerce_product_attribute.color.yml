@@ -1,0 +1,7 @@
+uuid: 74ebaf0b-d894-4bfa-9bce-c29fc4da2d70
+langcode: ru
+status: true
+dependencies: {  }
+id: color
+label: Цвет
+elementType: select

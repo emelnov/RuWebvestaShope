@@ -1,0 +1,90 @@
+uuid: b6e555e0-be18-44bb-9ac4-0239cfe97568
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.vesta_product
+    - core.entity_view_mode.commerce_product.teaser
+    - field.field.commerce_product.vesta_product.body
+    - field.field.commerce_product.vesta_product.field_image_product_view
+    - field.field.commerce_product.vesta_product.field_select_catalog
+  module:
+    - commerce_ajax_atc
+    - commerce_product
+    - field_group
+    - svg_image
+    - text
+third_party_settings:
+  field_group:
+    group_div:
+      children:
+        - title
+        - variations
+      label: div
+      parent_name: ''
+      region: hidden
+      weight: 8
+      format_type: html_element
+      format_settings:
+        classes: content
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: commerce_product.vesta_product.teaser
+targetEntityType: commerce_product
+bundle: vesta_product
+mode: teaser
+content:
+  body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image_product_view:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings:
+      commerce_ajax_atc:
+        enable_ajax: true
+    weight: 4
+    region: content
+hidden:
+  created: true
+  field_select_catalog: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  uid: true

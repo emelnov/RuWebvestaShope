@@ -1,0 +1,23 @@
+uuid: 83e934ce-68c5-42f7-808c-a5c9c7274f00
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.slide
+  module:
+    - text
+id: node.slide.body
+field_name: body
+entity_type: node
+bundle: slide
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

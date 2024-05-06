@@ -1,0 +1,14 @@
+uuid: ef41f0f0-7dc8-4ccd-9b40-09ff52ea530d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.admin
+  module:
+    - user
+id: user_remove_role_action.admin
+label: 'Удалить роль Админ из выбранных пользователей'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: admin

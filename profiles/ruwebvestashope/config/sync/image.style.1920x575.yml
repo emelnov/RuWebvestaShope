@@ -1,0 +1,15 @@
+uuid: 8fe2fb75-e151-49d7-8a13-9c8fb3d21ef5
+langcode: ru
+status: true
+dependencies: {  }
+name: 1920x575
+label: 'Slider 1920x575'
+effects:
+  101a09d4-7c2e-4e36-9b76-5992dbe61944:
+    uuid: 101a09d4-7c2e-4e36-9b76-5992dbe61944
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 575
+      anchor: center-center

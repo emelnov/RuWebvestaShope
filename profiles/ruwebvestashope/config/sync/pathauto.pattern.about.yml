@@ -1,0 +1,22 @@
+uuid: 2309d86a-cf33-4ca1-8742-e5edbe561f04
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: about
+label: 'О нас'
+type: 'canonical_entities:node'
+pattern: 'about/[node:title]'
+selection_criteria:
+  2f68f4e3-be76-4fd0-9a6e-388e93a0b2fd:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 2f68f4e3-be76-4fd0-9a6e-388e93a0b2fd
+    context_mapping:
+      node: node
+    bundles:
+      about: about
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,85 @@
+uuid: e8fb5c2e-814d-4cee-80ff-58a63335aced
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.vesta_product
+    - field.field.commerce_product_variation.vesta_product.attribute_color
+    - field.field.commerce_product_variation.vesta_product.attribute_size
+    - field.field.commerce_product_variation.vesta_product.field_description
+    - field.field.commerce_product_variation.vesta_product.field_variation_image
+    - field.field.commerce_product_variation.vesta_product.weight
+    - image.style.thumbnail
+  module:
+    - commerce_price
+    - svg_image
+    - text
+id: commerce_product_variation.vesta_product.default
+targetEntityType: commerce_product_variation
+bundle: vesta_product
+mode: default
+content:
+  attribute_color:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  attribute_size:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_variation_image:
+    type: image_image
+    weight: 7
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  list_price:
+    type: commerce_list_price
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  price:
+    type: commerce_price_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sku:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  status: true
+  uid: true
+  weight: true

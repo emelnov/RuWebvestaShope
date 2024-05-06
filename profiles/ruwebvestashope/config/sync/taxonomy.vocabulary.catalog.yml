@@ -1,0 +1,17 @@
+uuid: 5188876f-d88e-46a3-a764-26512ea5a612
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: grz55KQ4ZI1kpN-K0OuQTnbST33HMi-g28VoW3H_6FU
+name: Каталог
+vid: catalog
+description: ''
+weight: 0

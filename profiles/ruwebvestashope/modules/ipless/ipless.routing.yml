@@ -1,0 +1,7 @@
+ipless.watching:
+  path: /ipless/watching
+  defaults:
+    _controller: \Drupal\ipless\Controller\IplessController::watching
+  requirements:
+    _custom_access: \Drupal\ipless\Controller\IplessController::access
+    _permission: access content

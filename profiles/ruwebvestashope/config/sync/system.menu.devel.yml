@@ -1,0 +1,13 @@
+uuid: 283de8e5-0739-402f-9aa5-5cdda68c4588
+langcode: ru
+status: true
+dependencies:
+  enforced:
+    module:
+      - devel
+_core:
+  default_config_hash: 3V-l1uuTcyirYOGLPZV5HWaDfr02uEbWZJIwc8Byz-c
+id: devel
+label: Разработка
+description: 'Ссылки, созданные модулем Devel.'
+locked: true

@@ -1,0 +1,25 @@
+uuid: ab0a18aa-95ef-45ac-a22a-da0ffa3d43a9
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c943f347-a31b-4143-98f8-6cc9e0be1963'
+  module:
+    - block_content
+  theme:
+    - vesta_theme
+id: vesta_theme_kopirayt
+theme: vesta_theme
+region: copyrights
+weight: 0
+provider: null
+plugin: 'block_content:c943f347-a31b-4143-98f8-6cc9e0be1963'
+settings:
+  id: 'block_content:c943f347-a31b-4143-98f8-6cc9e0be1963'
+  label: Копирайт
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

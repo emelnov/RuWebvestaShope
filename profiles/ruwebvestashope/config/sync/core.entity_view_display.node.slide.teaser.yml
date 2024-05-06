@@ -1,0 +1,101 @@
+uuid: 18f97032-8ae7-4960-adef-e4fde81ee8ec
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.slide.body
+    - field.field.node.slide.field_image
+    - field.field.node.slide.field_slide_link
+    - field.field.node.slide.field_slide_title
+    - image.style.catalog_teaser
+    - node.type.slide
+  module:
+    - ds
+    - field_group
+    - svg_image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      ds_content:
+        - field_image
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: false
+          'link class': ''
+          link_target: ''
+          wrapper: div
+          class: ''
+  field_group:
+    group_content:
+      children:
+        - langcode
+        - body
+        - field_slide_link
+        - field_slide_title
+        - links
+      label: Содержимое
+      parent_name: ''
+      region: hidden
+      weight: 11
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: node.slide.teaser
+targetEntityType: node
+bundle: slide
+mode: teaser
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: catalog_teaser
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  body: true
+  field_slide_link: true
+  field_slide_title: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

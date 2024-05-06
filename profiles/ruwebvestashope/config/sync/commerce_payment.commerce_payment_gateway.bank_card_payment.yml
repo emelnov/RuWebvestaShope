@@ -1,0 +1,19 @@
+uuid: 42ed1840-1f9d-4138-9b39-ffe20d80eeec
+langcode: ru
+status: true
+dependencies: {  }
+id: bank_card_payment
+label: 'Оплата банковской картой'
+weight: null
+plugin: manual
+configuration:
+  display_label: 'Оплата банковской картой'
+  mode: n/a
+  payment_method_types:
+    - credit_card
+  collect_billing_information: false
+  instructions:
+    value: ''
+    format: plain_text
+conditions: {  }
+conditionOperator: AND

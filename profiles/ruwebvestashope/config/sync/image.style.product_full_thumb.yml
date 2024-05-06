@@ -1,0 +1,17 @@
+uuid: 42235063-9942-4d08-97ec-96166462968f
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: qXX1OHIlQxejqOq_ISOLNDFamGe4i7MizD7Ay1NCm2E
+name: product_full_thumb
+label: 'Product Full thumb'
+effects:
+  9ed5c0dd-b248-4e5f-bd4b-80ade0373990:
+    uuid: 9ed5c0dd-b248-4e5f-bd4b-80ade0373990
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 100
+      height: 100
+      anchor: center-center

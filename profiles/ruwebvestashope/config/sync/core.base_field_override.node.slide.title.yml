@@ -1,0 +1,18 @@
+uuid: d3f87687-d9a6-49ed-a81f-71a42450c0e9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.slide
+id: node.slide.title
+field_name: title
+entity_type: node
+bundle: slide
+label: Название
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,15 @@
+phone_number: '+7 (912) 345 67-89'
+mail: testmail@mail.ru
+additional_info: ''
+table:
+  -
+    variable_name: teststring
+    variable_value: test
+viber: ''
+whatsapp: ''
+vk: ''
+telegram: ''
+index: ''
+city: ''
+street: ''
+house: ''

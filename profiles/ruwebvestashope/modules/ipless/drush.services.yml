@@ -1,0 +1,6 @@
+services:
+  ipless.commands:
+    class: Drupal\ipless\Commands\IplessCommands
+    arguments: [ "@ipless.base" ]
+    tags:
+      - { name: drush.command }

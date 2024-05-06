@@ -1,0 +1,23 @@
+commerce_ajax.configuration:
+  path: '/admin/commerce/config/ajax'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Ajax'
+  requirements:
+    _permission: 'access commerce administration pages'
+
+commerce_ajax_atc.ajax_settings_form:
+  path: '/admin/commerce/config/ajax-settings'
+  defaults:
+    _form: '\Drupal\commerce_ajax_atc\Form\AjaxSettingsForm'
+    _title: 'Ajax Settings'
+  requirements:
+    _permission: 'access ajax atc administration pages'
+
+commerce_ajax_atc.closeModal:
+  path: '/close-modal-form'
+  defaults:
+    _controller: '\Drupal\commerce_ajax_atc\Controller\ModalController::closeModalForm'
+    _title: 'Close modal'
+  requirements:
+    _permission: 'access content'

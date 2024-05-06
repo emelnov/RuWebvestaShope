@@ -1,0 +1,182 @@
+uuid: d04851f3-655f-40ce-8bb8-12759e394c38
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.vesta_product
+    - core.entity_view_mode.commerce_product_variation.full
+    - field.field.commerce_product_variation.vesta_product.attribute_color
+    - field.field.commerce_product_variation.vesta_product.attribute_size
+    - field.field.commerce_product_variation.vesta_product.field_description
+    - field.field.commerce_product_variation.vesta_product.field_variation_image
+    - field.field.commerce_product_variation.vesta_product.weight
+    - image.style.product_full
+    - image.style.thumbnail
+  module:
+    - blazy
+    - commerce_price
+    - ds
+    - slick
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      ds_content:
+        - field_variation_image
+        - list_price
+        - product_id
+        - sku
+        - title
+        - price
+        - attribute_color
+        - attribute_size
+        - field_description
+id: commerce_product_variation.vesta_product.full
+targetEntityType: commerce_product_variation
+bundle: vesta_product
+mode: full
+content:
+  attribute_color:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: ds_content
+  attribute_size:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 7
+    region: ds_content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: ds_content
+  field_variation_image:
+    type: slick_image
+    label: hidden
+    settings:
+      caption:
+        alt: '0'
+        title: '0'
+      optionset: glavyny_slayd_produktov
+      link: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: product_full
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: thumbnail
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      style: ''
+      skin: default
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      optionset_thumbnail: massiv_slaydov_produkta
+      skin_thumbnail: asnavfor
+      thumbnail_caption: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      override: false
+      skin_arrows: ''
+      skin_dots: ''
+      preserve_keys: false
+      visible_items: null
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+  list_price:
+    type: commerce_price_default
+    label: hidden
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+  price:
+    type: commerce_price_default
+    label: hidden
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 5
+    region: ds_content
+  product_id:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+  sku:
+    type: blazy_title
+    label: hidden
+    settings:
+      delimiter: '|'
+      tag: small
+      break: false
+    third_party_settings: {  }
+    weight: 3
+    region: ds_content
+  title:
+    type: blazy_title
+    label: hidden
+    settings:
+      delimiter: '|'
+      tag: small
+      break: false
+    third_party_settings: {  }
+    weight: 4
+    region: ds_content
+hidden:
+  commerce_variation_cart_form: true
+  langcode: true
+  search_api_excerpt: true
+  weight: true

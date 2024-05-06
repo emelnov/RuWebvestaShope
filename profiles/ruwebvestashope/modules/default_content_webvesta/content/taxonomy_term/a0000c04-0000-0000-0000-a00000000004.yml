@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: a0000c04-0000-0000-0000-a00000000004
+  bundle: product_options
+  default_langcode: ru
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: Популярные
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Популярные | Веста'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://default/productoptions/populyarnye'
+  path:
+    -
+      alias: /productoptions/populyarnye
+      langcode: ru
+      pathauto: 1

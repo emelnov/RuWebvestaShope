@@ -1,0 +1,83 @@
+uuid: 18455463-a542-496e-8661-15ce503e42f2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.page
+  module:
+    - feeds_ex
+    - feeds_log
+    - node
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+    source: true
+label: '1C feed'
+id: 1c_feed
+description: ''
+help: ''
+import_period: -1
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: xml
+parser_configuration:
+  context:
+    value: //Товар
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+  use_tidy: false
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: page
+  langcode: ru
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+custom_sources:
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+    type: blank
+  nazvanie_kartochki_tovara:
+    label: Наименование
+    machine_name: nazvanie_kartochki_tovara
+    value: Наименование
+    raw: false
+    inner: true
+    type: xml
+mappings:
+  -
+    target: title
+    map:
+      value: nazvanie_kartochki_tovara
+    settings:
+      language: ru
+    unique: {  }

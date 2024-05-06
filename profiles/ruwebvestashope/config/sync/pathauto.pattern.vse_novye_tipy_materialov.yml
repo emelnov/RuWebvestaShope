@@ -1,0 +1,14 @@
+uuid: 72707bcf-bc65-4981-936c-cb1de5d7ab8b
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: vse_novye_tipy_materialov
+label: 'Все новые типы материалов'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: -2
+relationships: {  }

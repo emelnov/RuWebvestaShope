@@ -1,0 +1,28 @@
+uuid: 4523b8b1-80ce-4b6c-8481-af98de158b0f
+langcode: ru
+status: true
+dependencies:
+  module:
+    - formblock
+    - system
+  theme:
+    - vesta_theme
+id: vesta_theme_contentform
+theme: vesta_theme
+region: content
+weight: -7
+provider: null
+plugin: formblock_node
+settings:
+  id: formblock_node
+  label: 'Content form'
+  label_display: '0'
+  provider: formblock
+  type: review
+  form_mode: default
+  show_help: 0
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /reviews

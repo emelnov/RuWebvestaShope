@@ -1,0 +1,55 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 5673235b-764c-4739-a6f2-699fefa92ebf
+  bundle: photogallery
+  default_langcode: ru
+  depends:
+    e4063513-137c-4f3e-8437-354a0467fc45: media
+    5efc580e-6890-4e47-a74c-2d3c29e7ace7: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Вторая галерея'
+  created:
+    -
+      value: 1709709935
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Вторая галерея | Веста'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://default/gallery/photo/vtoraya-galereya'
+  path:
+    -
+      alias: /gallery/photo/vtoraya-galereya
+      langcode: ru
+      pathauto: 1
+  field_gallery:
+    -
+      entity: e4063513-137c-4f3e-8437-354a0467fc45
+    -
+      entity: 5efc580e-6890-4e47-a74c-2d3c29e7ace7

@@ -1,0 +1,22 @@
+uuid: 1c47bc57-72a9-4c24-b0c3-9e3c37a18ecd
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: photogallery
+label: Фотогалерея
+type: 'canonical_entities:node'
+pattern: 'gallery/photo/[node:title]'
+selection_criteria:
+  41592f81-ee6e-432d-8b72-cb56741f6ff8:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 41592f81-ee6e-432d-8b72-cb56741f6ff8
+    context_mapping:
+      node: node
+    bundles:
+      photogallery: photogallery
+selection_logic: and
+weight: -3
+relationships: {  }

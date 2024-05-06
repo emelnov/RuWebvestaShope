@@ -1,0 +1,107 @@
+uuid: c888fef4-9140-4e2d-969e-890fa4c2e2c4
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.vesta_product
+    - field.field.commerce_product.vesta_product.body
+    - field.field.commerce_product.vesta_product.field_image_product_view
+    - field.field.commerce_product.vesta_product.field_select_catalog
+  module:
+    - blazy
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      ds_content:
+        - uid
+        - field_image_product_view
+        - variations
+        - body
+id: commerce_product.vesta_product.default
+targetEntityType: commerce_product
+bundle: vesta_product
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: ds_content
+  field_image_product_view:
+    type: blazy_file
+    label: above
+    settings:
+      caption: {  }
+      link: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: lazy
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      style: ''
+      svg_inline: false
+      svg_fill: false
+      svg_sanitize: true
+      svg_sanitize_remote: false
+      svg_hide_caption: false
+      svg_attributes: ''
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+  uid:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+  variations:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: add_to_cart_form
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+hidden:
+  created: true
+  field_select_catalog: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  title: true

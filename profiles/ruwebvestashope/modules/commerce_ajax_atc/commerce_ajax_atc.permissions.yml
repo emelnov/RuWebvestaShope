@@ -1,0 +1,3 @@
+'access ajax atc administration pages':
+  title: 'Administer the Commerce Ajax ATC (Add to cart) settings pages'
+  'restrict access': TRUE

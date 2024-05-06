@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: e5867227-2d10-4069-9d76-30fff5f50607
+  bundle: basic
+  default_langcode: ru
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Кнопка скролла наверх'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Веста'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://default/glavnaya-stranica'
+  body:
+    -
+      value: '<button id="scrollToTop">Наверх</button>'
+      format: php
+      summary: ''

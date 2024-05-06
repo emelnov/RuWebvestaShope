@@ -1,0 +1,112 @@
+<?php
+
+/**
+ * @file
+ * Provides a media gallery entity type.
+ */
+
+use Drupal\Core\Render\Element;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function media_gallery_help(string $route_name, RouteMatchInterface $route_match) {
+  if ($route_name === 'help.page.media_gallery') {
+    $output = '<h3>' . t('About') . '</h3>';
+    $output .= '<p>' . t('The Media Gallery module allows you to create and manage galleries of media items on your Drupal site.') . '</p>';
+    return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function media_gallery_theme(): array {
+  return [
+    'media_gallery' => [
+      'render element' => 'elements',
+    ],
+    'views_view_unformatted__media_galleries' => [
+      'base hook' => 'view',
+    ],
+  ];
+}
+
+/**
+ * Returns pager array.
+ */
+function _media_gallery_pager_array(array $items, int $itemsPerPage): ?array {
+  $total = \count($items);
+  $currentPage = \Drupal::service('pager.manager')->createPager($total, $itemsPerPage)->getCurrentPage();
+  $chunks = \array_chunk($items, $itemsPerPage);
+  $currentPageItemsRaw = $chunks[$currentPage];
+
+  $currentPageItems = [];
+  foreach ($currentPageItemsRaw as $currentPageItem) {
+    $currentPageItems[$currentPageItem->id()] = $currentPageItem;
+  }
+
+  return $currentPageItems;
+}
+
+/**
+ * Prepares variables for media gallery templates.
+ */
+function media_gallery_preprocess_media_gallery(array &$variables): void {
+  $variables['media_gallery'] = $variables['elements']['#media_gallery'];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+
+  $entity = $variables['elements']['#media_gallery'];
+  $use_pager = $entity->get('use_pager')->value;
+  $reverse = $entity->get('reverse')->value;
+
+  if ($use_pager) {
+    $variables['use_pager'] = TRUE;
+    if (isset($variables['elements']['images']['#items'])) {
+      $images = $variables['elements']['images']['#items']->referencedEntities();
+      if ($images) {
+        if ($reverse) {
+          $images = array_reverse($images);
+        }
+        $images = _media_gallery_pager_array($images, 9);
+        $images_with_pager = [];
+        $view_mode = $variables['elements']['images'][0]['#view_mode'] ?? 'media_colorbox';
+        foreach ($images as $image) {
+          $images_with_pager[] = \Drupal::entityTypeManager()->getViewBuilder('media')->view($image, $view_mode);
+        }
+        $variables['images'] = $images_with_pager;
+        $variables['pager'] = ['#type' => 'pager'];
+      }
+    }
+  }
+  else {
+    $variables['use_pager'] = FALSE;
+    if ($reverse) {
+      $images = $variables['content']['images'];
+      $images = array_intersect_key($images, array_flip(array_filter(array_keys($images), 'is_numeric')));
+      $images = array_reverse($images);
+      $variables['content']['images'] = array_filter($variables['content']['images'], 'is_string', ARRAY_FILTER_USE_KEY);
+      $variables['content']['images'] += $images;
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function media_gallery_theme_suggestions_media_gallery(array $variables): array {
+  $suggestions = [];
+  $media_gallery = $variables['elements']['#media_gallery'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'media_gallery__' . $sanitized_view_mode;
+  $suggestions[] = 'media_gallery__' . $media_gallery->bundle();
+  $suggestions[] = 'media_gallery__' . $media_gallery->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'media_gallery__' . $media_gallery->id();
+  $suggestions[] = 'media_gallery__' . $media_gallery->id() . '__' . $sanitized_view_mode;
+
+  return $suggestions;
+}

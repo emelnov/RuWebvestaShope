@@ -1,0 +1,10 @@
+--- shs.info.yml
++++ shs.info.yml
+@@ -1,7 +1,6 @@
+ name: Simple Hierarchical Select
+ type: module
+ description: 'Creates a simple hierarchical select widget for taxonomy fields.'
+-configure: shs.term_data
+ dependencies:
+   - drupal:system (>=9.5)
+   - drupal:taxonomy

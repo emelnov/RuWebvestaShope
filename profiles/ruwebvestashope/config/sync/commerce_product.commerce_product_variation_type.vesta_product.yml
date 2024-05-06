@@ -1,0 +1,11 @@
+uuid: 9a93191a-6721-4e64-86a9-a8580a8cb1d5
+langcode: ru
+status: true
+dependencies: {  }
+id: vesta_product
+label: Товар
+traits:
+  - purchasable_entity_shippable
+locked: false
+orderItemType: default
+generateTitle: false

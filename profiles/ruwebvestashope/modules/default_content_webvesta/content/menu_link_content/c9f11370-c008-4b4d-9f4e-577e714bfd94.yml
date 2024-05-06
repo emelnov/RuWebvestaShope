@@ -1,0 +1,49 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: c9f11370-c008-4b4d-9f4e-577e714bfd94
+  bundle: menu_link_content
+  default_langcode: ru
+  depends:
+    0f90475b-df41-46bf-b386-0716ca72d782: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Контакты
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      target_uuid: 0f90475b-df41-46bf-b386-0716ca72d782
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: -44
+  expanded:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Веста'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://default/glavnaya-stranica'

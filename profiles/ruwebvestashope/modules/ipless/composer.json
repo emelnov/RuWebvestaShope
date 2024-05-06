@@ -1,0 +1,24 @@
+{
+    "name": "drupal/ipless",
+    "type": "drupal-module",
+    "description": "Simple Less makes it easy to compile Less style sheets.",
+    "keywords":  ["Drupal", "CSS"],
+    "homepage": "https://www.drupal.org/project/ipless",
+    "minimum-stability": "dev",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Damien Laguerre (damien-laguerre)",
+            "homepage": "https://www.drupal.org/u/damien-laguerre",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ipless",
+        "source": "https://git.drupalcode.org/project/ipless"
+    },
+    "require": {
+        "drupal/core": "^9.4 || ^10",
+        "wikimedia/less.php": "^3.1"
+    }
+}

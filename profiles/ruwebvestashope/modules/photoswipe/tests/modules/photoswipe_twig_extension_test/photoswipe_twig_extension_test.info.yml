@@ -1,0 +1,10 @@
+name: 'Photoswipe Twig Extension Test'
+type: module
+description: 'Support module for testing Photoswipe Twig extensions.'
+package: Testing
+# version: VERSION
+
+# Information added by Drupal.org packaging script on 2024-03-26
+version: '5.0.0'
+project: 'photoswipe'
+datestamp: 1711468659

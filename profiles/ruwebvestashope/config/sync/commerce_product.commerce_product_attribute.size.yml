@@ -1,0 +1,7 @@
+uuid: 3b4da7b3-8a98-4188-9906-4bca5fd8545e
+langcode: ru
+status: true
+dependencies: {  }
+id: size
+label: Размер
+elementType: select

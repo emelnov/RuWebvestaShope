@@ -1,0 +1,58 @@
+field.formatter.third_party.commerce_ajax_atc:
+  type: mapping
+  mapping:
+    enable_ajax:
+      type: boolean
+      label: 'Whether or not to use ajax on the add to cart form.'
+commerce_ajax_atc.settings:
+  type: config_object
+  label: 'Ajax Configuration'
+  mapping:
+    pop_up_type:
+      type: string
+      label: 'Confirmation type'
+    include_cart_button:
+      type: boolean
+      label: 'Include a view cart button'
+    cart_button_text:
+      type: string
+      label: 'View cart button text'
+    include_checkout_button:
+      type: boolean
+      label: 'Include a checkout button'
+    checkout_button_text:
+      type: string
+      label: 'Checkout button text'
+    include_close_button:
+      type: boolean
+      label: 'Include a close button'
+    close_button_text:
+      type: string
+      label: 'Close button text'
+    success_message:
+      type: string
+      label: 'Success message'
+    cart_link_text:
+      type: string
+      label: 'Cart link text'
+    use_twig_template:
+      type: boolean
+      label: 'Enable the commerce-ajax-add-to-cart-popup.html.twig template for the pop-up.'
+    ajax_modal_title:
+      type: string
+      label: 'Modal title'
+    ajax_modal_width:
+      type: string
+      label: 'Modal width'
+    ajax_modal_height:
+      type: string
+      label: 'Modal height'
+    colorbox_width:
+      type: string
+      label: 'Colorbox width'
+    colorbox_height:
+      type: string
+      label: 'Colorbox height'
+    enable_variation_cart_form_ajax:
+      type: boolean
+      label: 'Enable Commerce Variation Cart Form Ajax'

@@ -1,0 +1,25 @@
+uuid: 9c6461ef-feb7-466b-a7d8-93c480e6966a
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d3038f1d-31ec-48d9-a2a8-50b05385e839'
+  module:
+    - block_content
+  theme:
+    - vesta_theme
+id: vesta_theme_logo
+theme: vesta_theme
+region: header
+weight: -10
+provider: null
+plugin: 'block_content:d3038f1d-31ec-48d9-a2a8-50b05385e839'
+settings:
+  id: 'block_content:d3038f1d-31ec-48d9-a2a8-50b05385e839'
+  label: Лого
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

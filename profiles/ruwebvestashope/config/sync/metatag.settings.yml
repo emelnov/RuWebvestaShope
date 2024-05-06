@@ -1,0 +1,52 @@
+langcode: ru
+entity_type_groups:
+  commerce_product:
+    vesta_product:
+      basic: basic
+      advanced: advanced
+      open_graph_products: open_graph_products
+  media:
+    image:
+      basic: basic
+      advanced: advanced
+      open_graph: open_graph
+  node:
+    about:
+      basic: basic
+      advanced: advanced
+      open_graph: open_graph
+    article:
+      basic: basic
+      advanced: advanced
+      open_graph: open_graph
+    front:
+      basic: basic
+      advanced: advanced
+      open_graph: open_graph
+    news:
+      basic: basic
+      advanced: advanced
+      open_graph: open_graph
+    page:
+      basic: basic
+      advanced: advanced
+      open_graph: open_graph
+    photogallery:
+      basic: basic
+      advanced: advanced
+      open_graph: open_graph
+    webform:
+      basic: basic
+      advanced: advanced
+      open_graph: open_graph
+separator: ','
+tag_trim_method: beforeValue
+use_maxlength: true
+tag_trim_maxlength:
+  metatag_maxlength_title: null
+  metatag_maxlength_description: null
+  metatag_maxlength_abstract: null
+  metatag_maxlength_og_site_name: null
+  metatag_maxlength_og_title: null
+  metatag_maxlength_og_description: null
+tag_scroll_max_height: ''

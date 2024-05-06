@@ -1,0 +1,21 @@
+uuid: eb9116be-b85a-40da-ab85-eab8bc38ea2d
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_order
+id: commerce_order.field_fio_organisation
+field_name: field_fio_organisation
+entity_type: commerce_order
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

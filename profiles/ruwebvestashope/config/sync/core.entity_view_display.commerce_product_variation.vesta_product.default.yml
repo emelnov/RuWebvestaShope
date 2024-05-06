@@ -1,0 +1,158 @@
+uuid: 7af83cf4-4891-4e57-91e0-32b823dfaeff
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.vesta_product
+    - field.field.commerce_product_variation.vesta_product.attribute_color
+    - field.field.commerce_product_variation.vesta_product.attribute_size
+    - field.field.commerce_product_variation.vesta_product.field_description
+    - field.field.commerce_product_variation.vesta_product.field_variation_image
+    - field.field.commerce_product_variation.vesta_product.weight
+    - image.style.product_full
+    - image.style.product_full_thumb
+  module:
+    - commerce_price
+    - ds
+    - slick
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      ds_content:
+        - field_variation_image
+        - sku
+        - title
+        - price
+        - field_description
+        - attribute_color
+        - attribute_size
+id: commerce_product_variation.vesta_product.default
+targetEntityType: commerce_product_variation
+bundle: vesta_product
+mode: default
+content:
+  attribute_color:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: add_to_cart
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: ds_content
+  attribute_size:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: add_to_cart
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: ds_content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: ds_content
+  field_variation_image:
+    type: slick_image
+    label: hidden
+    settings:
+      caption:
+        alt: '0'
+        title: '0'
+      optionset: glavyny_slayd_produktov
+      link: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      use_theme_field: false
+      box_style: ''
+      image_style: product_full
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: product_full_thumb
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      style: ''
+      skin: default
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      optionset_thumbnail: massiv_slaydov_produkta
+      skin_thumbnail: asnavfor
+      thumbnail_caption: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      override: false
+      skin_arrows: ''
+      skin_dots: ''
+      preserve_keys: false
+      visible_items: null
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+  price:
+    type: commerce_price_default
+    label: hidden
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 3
+    region: ds_content
+  sku:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+hidden:
+  commerce_variation_cart_form: true
+  langcode: true
+  list_price: true
+  product_id: true
+  search_api_excerpt: true
+  weight: true

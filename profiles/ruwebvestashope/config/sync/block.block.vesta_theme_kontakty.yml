@@ -1,0 +1,25 @@
+uuid: f4d85a13-3cdf-4255-b988-28c614e211ba
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:15d3edb1-6cfa-4179-8114-d164f9b911e3'
+  module:
+    - block_content
+  theme:
+    - vesta_theme
+id: vesta_theme_kontakty
+theme: vesta_theme
+region: header
+weight: -9
+provider: null
+plugin: 'block_content:15d3edb1-6cfa-4179-8114-d164f9b911e3'
+settings:
+  id: 'block_content:15d3edb1-6cfa-4179-8114-d164f9b911e3'
+  label: Контакты
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

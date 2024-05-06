@@ -1,0 +1,17 @@
+uuid: 358c78f7-d330-415d-8508-c3344d131e81
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: 5F20v9UtS0Yz4bPdHSCoobxXlHbim-oiqRBO7DHhGq4
+name: 'Метки товара'
+vid: product_options
+description: ''
+weight: 0

@@ -1,0 +1,18 @@
+services:
+  ipless.base:
+    class: Drupal\ipless\Ipless
+    arguments: ['@config.factory' , '@ipless.asset.renderer','@library.discovery','@module_handler','@theme_handler', '@file_system','@state']
+
+  ipless.event.subscriber:
+    class: Drupal\ipless\EventSubscriber\HtmlResponseIplessSubscriber
+    tags:
+      - { name: event_subscriber }
+    arguments: ['@ipless.base', '@ipless.asset.resolver']
+
+  ipless.asset.resolver:
+    class: Drupal\ipless\Asset\AssetResolver
+    arguments: ['@library.discovery', '@library.dependency_resolver', '@module_handler', '@theme.manager', '@language_manager', '@cache.data', '@extension.list.module', '@extension.list.theme']
+
+  ipless.asset.renderer:
+    class: Drupal\ipless\Asset\AssetRenderer
+    arguments: ['@theme_handler', '@library.discovery', '@theme.manager', '@config.factory', '@ipless.asset.resolver', '@event_dispatcher', '@current_user','@file_system']

@@ -1,0 +1,19 @@
+uuid: 478f5a8e-7c67-49c4-b537-5cdd707bc456
+langcode: ru
+status: true
+dependencies: {  }
+id: post_payment
+label: 'Оплата при получении'
+weight: null
+plugin: manual
+configuration:
+  display_label: 'Оплата при получении'
+  mode: n/a
+  payment_method_types:
+    - credit_card
+  collect_billing_information: false
+  instructions:
+    value: ''
+    format: plain_text
+conditions: {  }
+conditionOperator: AND

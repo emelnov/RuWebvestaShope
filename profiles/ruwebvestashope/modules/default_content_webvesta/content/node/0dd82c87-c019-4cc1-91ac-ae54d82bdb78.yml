@@ -1,0 +1,55 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 0dd82c87-c019-4cc1-91ac-ae54d82bdb78
+  bundle: photogallery
+  default_langcode: ru
+  depends:
+    e4063513-137c-4f3e-8437-354a0467fc45: media
+    5efc580e-6890-4e47-a74c-2d3c29e7ace7: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Первая галерея'
+  created:
+    -
+      value: 1709709917
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Первая галерея | Веста'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://default/gallery/photo/pervaya-galereya'
+  path:
+    -
+      alias: /gallery/photo/pervaya-galereya
+      langcode: ru
+      pathauto: 1
+  field_gallery:
+    -
+      entity: e4063513-137c-4f3e-8437-354a0467fc45
+    -
+      entity: 5efc580e-6890-4e47-a74c-2d3c29e7ace7

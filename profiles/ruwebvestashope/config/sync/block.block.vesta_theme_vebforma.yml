@@ -1,0 +1,31 @@
+uuid: d409b34b-db93-4c87-ac02-a00b053bac6d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - webform.webform.contact
+  module:
+    - system
+    - webform
+  theme:
+    - vesta_theme
+id: vesta_theme_vebforma
+theme: vesta_theme
+region: form
+weight: -9
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Веб-форма
+  label_display: visible
+  provider: webform
+  webform_id: contact
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

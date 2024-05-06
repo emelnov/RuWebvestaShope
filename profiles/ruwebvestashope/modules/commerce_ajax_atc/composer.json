@@ -1,0 +1,16 @@
+{
+    "name": "drupal/commerce_ajax_atc",
+    "type": "drupal-module",
+    "description": "Commerce Ajax ATC is a flexible ajax solution.",
+    "homepage": "http://drupal.org/project/commerce_ajax_atc",
+    "license": "GPL-2.0+",
+    "require": {
+        "drupal/commerce": "^2.36"
+    },
+    "require-dev": {
+        "drupal/colorbox_load": "^1.2",
+        "drupal/commerce_variation_cart_form": "^1.2",
+        "drupal/commerce_vado": "^2.0"
+    },
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,5 @@
+name: 'WebVesta Claro'
+type: theme
+base theme: claro
+description: 'A subtheme of Claro customized for WebVesta installation.'
+core_version_requirement: ^10

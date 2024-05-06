@@ -1,0 +1,12 @@
+plugin.plugin_configuration.search_api_processor.snowball_stemmer:
+  type: search_api.fields_processor_configuration
+  label: 'Snowball Stemmer processor configuration'
+  mapping:
+    exceptions:
+      type: sequence
+      label: 'Stemming exceptions'
+      orderby: key
+      sequence:
+        type: string
+        label: Exception
+

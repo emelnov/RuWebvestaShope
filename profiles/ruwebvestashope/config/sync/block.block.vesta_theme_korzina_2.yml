@@ -1,0 +1,21 @@
+uuid: 67167c20-89b8-479a-87dc-e7226072676a
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - vesta_theme
+id: vesta_theme_korzina_2
+theme: vesta_theme
+region: header_mobile
+weight: -11
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Корзина
+  label_display: visible
+  provider: commerce_cart
+  dropdown: true
+visibility: {  }

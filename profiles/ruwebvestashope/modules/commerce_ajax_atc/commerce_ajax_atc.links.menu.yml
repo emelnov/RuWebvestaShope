@@ -1,0 +1,12 @@
+commerce_ajax.configuration:
+  title: 'Ajax'
+  route_name: 'commerce_ajax.configuration'
+  parent: 'commerce.configuration'
+  weight: 99
+
+commerce_ajax_atc.ajax_settings_form:
+  title: 'Ajax add to cart pop-up setttings'
+  route_name: commerce_ajax_atc.ajax_settings_form
+  description: 'Global settings for Ajax Add to Cart.'
+  parent: 'commerce_ajax.configuration'
+  weight: 99

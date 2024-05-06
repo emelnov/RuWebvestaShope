@@ -1,0 +1,74 @@
+uuid: 66283847-835e-466b-891d-4a709a415763
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.vesta_product
+    - field.field.commerce_product.vesta_product.body
+    - field.field.commerce_product.vesta_product.field_image_product_view
+    - field.field.commerce_product.vesta_product.field_select_catalog
+    - image.style.thumbnail
+  module:
+    - commerce
+    - path
+    - svg_image
+    - text
+id: commerce_product.vesta_product.default
+targetEntityType: commerce_product
+bundle: vesta_product
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_image_product_view:
+    type: image_image
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_select_catalog:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  stores:
+    type: commerce_entity_select
+    weight: 4
+    region: content
+    settings:
+      hide_single_entity: true
+      autocomplete_threshold: 7
+      autocomplete_size: 60
+      autocomplete_placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  status: true
+  uid: true
+  variations: true

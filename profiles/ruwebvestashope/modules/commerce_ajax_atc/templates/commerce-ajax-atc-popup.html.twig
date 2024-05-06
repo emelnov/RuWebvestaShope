@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ *
+ * Default template for the ajax add-to-cart popup.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product_variation: The rendered product variation fields.
+ *   This will fallback to the 'Default' view mode for the variation type unless you
+ *   enable the 'Ajax Add to Cart Popup' view mode provided by this module.
+ * - product_variation_entity: The product variation entity.
+ *   Examples of how to use this would be:
+ *   {{ product_variation_entity.sku.value }}
+ *   {{ product_variation_entity.title.value }}
+ * - success_message: The text for the success message, set by the configuration.
+ * - cart_url: The URL of the shopping cart page.
+ * - cart_link_text: The text for the cart link, set by the configuration.
+ * - view_cart_button: the button to view the cart.
+ * - close_button: The button to close the modal.
+ * - include_buttons: returns true if either include_cart_button, or include_close_button are being used.
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes }}>
+  <p>
+    {# TODO create a custom message. {{ custom_message }} <a href="{{ cart_url }}">{{ cart_link_text }}</a> #}
+    {{ success_message }}
+  </p>
+  {{ product_variation }}
+  {% if include_buttons %}
+    <div class = "form-actions">
+      {{ view_cart_button }}
+      {{ checkout_button }}
+      {{ close_button }}
+    </div>
+  {% endif %}
+</div>

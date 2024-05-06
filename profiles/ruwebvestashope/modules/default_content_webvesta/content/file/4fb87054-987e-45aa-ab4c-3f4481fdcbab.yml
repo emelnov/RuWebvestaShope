@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 4fb87054-987e-45aa-ab4c-3f4481fdcbab
+  default_langcode: ru
+default:
+  uid:
+    -
+      target_id: 0
+  filename:
+    -
+      value: export.xml
+  uri:
+    -
+      value: 'public://cml/sale/2023-03-20--15-37-12-15202fe8-1/export.xml'
+  filemime:
+    -
+      value: application/xml
+  filesize:
+    -
+      value: 87
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1679308632

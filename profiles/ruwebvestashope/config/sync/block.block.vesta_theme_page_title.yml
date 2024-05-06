@@ -1,0 +1,26 @@
+uuid: c19dfcf4-0c5d-4afa-9198-177451c3ff8e
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vesta_theme
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: vesta_theme_page_title
+theme: vesta_theme
+region: content
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Заголовок страницы'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/product/*/*'

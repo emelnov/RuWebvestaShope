@@ -1,0 +1,10 @@
+name: 'DS Test layout theme'
+type: theme
+description: 'Theme for testing a theme-provided layout'
+base theme: starterkit_theme
+core_version_requirement: ^10
+
+# Information added by Drupal.org packaging script on 2024-04-26
+version: '8.x-3.21'
+project: 'ds'
+datestamp: 1714125842

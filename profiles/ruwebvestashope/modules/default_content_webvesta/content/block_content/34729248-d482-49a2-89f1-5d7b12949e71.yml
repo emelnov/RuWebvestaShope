@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 34729248-d482-49a2-89f1-5d7b12949e71
+  bundle: basic
+  default_langcode: ru
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Блок на странице Контакты'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| Веста'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://default/glavnaya-stranica'
+  body:
+    -
+      value: "<p class=\"field-tel\"><a class=\"tel\" href=\"tel:<?php print_field_info('phone_number'); ?>\"><?php print_field_info('phone_number'); ?></a></p>\r\n<p class=\"field-mail\"><a class=\"mail\" href=\"mailto:<?php print_field_info('mail'); ?>\"><?php print_field_info('mail'); ?></a></p>"
+      format: php
+      summary: ''

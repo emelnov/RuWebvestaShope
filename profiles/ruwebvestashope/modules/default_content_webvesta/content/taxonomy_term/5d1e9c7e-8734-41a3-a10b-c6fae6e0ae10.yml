@@ -1,0 +1,57 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 5d1e9c7e-8734-41a3-a10b-c6fae6e0ae10
+  bundle: catalog
+  default_langcode: ru
+  depends:
+    d6ccc307-b3df-47d4-a6b7-15a2ab6d1484: taxonomy_term
+    51279e3e-ef31-4fa9-bcdf-b2b36d372dfb: file
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Категория 2'
+  description:
+    -
+      value: '<p>Описание услуги</p>'
+      format: full_html
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      entity: d6ccc307-b3df-47d4-a6b7-15a2ab6d1484
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Категория 2 | Веста'
+    -
+      tag: meta
+      attributes:
+        name: description
+        content: 'Описание услуги'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'http://default/catalog/kategoriya/kategoriya-2'
+  path:
+    -
+      alias: /catalog/kategoriya/kategoriya-2
+      langcode: ru
+      pathauto: 1
+  field_catalog_image:
+    -
+      entity: 51279e3e-ef31-4fa9-bcdf-b2b36d372dfb
+      alt: 'Категория 2'
+      title: ''
+      width: 574
+      height: 574

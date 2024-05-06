@@ -1,0 +1,12 @@
+uuid: 327c480b-dd29-42b3-867b-0d7df6df879a
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: aKwb6fzjTqQcD1HLXjA06U1e_L7wviPrsS-KxQSlcx0
+id: product_param
+label: Parameters
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: d73be15d-79ee-4c82-b1bb-4ff5543d98fa
+langcode: ru
+status: true
+dependencies: {  }
+name: default
+label: default
+effects:
+  850a6a1d-caa9-481e-ad32-b879b27993fa:
+    uuid: 850a6a1d-caa9-481e-ad32-b879b27993fa
+    id: image_convert
+    weight: 1
+    data:
+      extension: webp
+  48268447-343e-4145-8059-707bce72831b:
+    uuid: 48268447-343e-4145-8059-707bce72831b
+    id: image_scale
+    weight: 2
+    data:
+      width: null
+      height: 250
+      upscale: false

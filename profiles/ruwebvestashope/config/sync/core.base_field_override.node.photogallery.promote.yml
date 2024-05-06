@@ -1,0 +1,22 @@
+uuid: 7c0451f8-7a29-44eb-aafe-eeedbcc0dd02
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.photogallery
+id: node.photogallery.promote
+field_name: promote
+entity_type: node
+bundle: photogallery
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

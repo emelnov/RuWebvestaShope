@@ -1,0 +1,13 @@
+uuid: 3fc2304d-6a62-430a-bdd2-114e40be73e2
+langcode: ru
+status: false
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: mQIF_foYjmnVSr9MpcD4CTaJE_FpO1AyDd_DskztGhM
+id: user.full
+label: 'Учётная запись пользователя'
+description: ''
+targetEntityType: user
+cache: true

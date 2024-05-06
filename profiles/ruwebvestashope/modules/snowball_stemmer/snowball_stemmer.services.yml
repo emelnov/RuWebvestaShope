@@ -1,0 +1,14 @@
+services:
+  snowball_stemmer.stemmer:
+    class: Drupal\snowball_stemmer\Stemmer
+    arguments: ['@event_dispatcher']
+
+  snowball_stemmer.norwegian_language_code_subscriber:
+    class: Drupal\snowball_stemmer\EventSubscriber\NorwegianLanguageCodeSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  snowball_stemmer.region_language_code_subscriber:
+    class: Drupal\snowball_stemmer\EventSubscriber\RegionLanguageCodeSubscriber
+    tags:
+      - { name: event_subscriber }

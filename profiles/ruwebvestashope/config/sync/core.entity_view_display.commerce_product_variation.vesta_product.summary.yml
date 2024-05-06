@@ -1,0 +1,59 @@
+uuid: cb8c3e04-2b4b-4f6e-b55b-668fa0dae40d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.vesta_product
+    - core.entity_view_mode.commerce_product_variation.summary
+    - field.field.commerce_product_variation.vesta_product.attribute_color
+    - field.field.commerce_product_variation.vesta_product.attribute_size
+    - field.field.commerce_product_variation.vesta_product.field_description
+    - field.field.commerce_product_variation.vesta_product.field_variation_image
+    - field.field.commerce_product_variation.vesta_product.weight
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      ds_content:
+        - title
+id: commerce_product_variation.vesta_product.summary
+targetEntityType: commerce_product_variation
+bundle: vesta_product
+mode: summary
+content:
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  attribute_color: true
+  attribute_size: true
+  field_description: true
+  field_variation_image: true
+  langcode: true
+  list_price: true
+  price: true
+  product_id: true
+  search_api_excerpt: true
+  sku: true
+  weight: true

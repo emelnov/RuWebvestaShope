@@ -1,0 +1,17 @@
+pop_up_type: modal_dialog
+include_cart_button: true
+cart_button_text: ''
+include_checkout_button: true
+checkout_button_text: ''
+include_close_button: false
+close_button_text: ''
+success_message: ''
+cart_link_text: ''
+use_twig_template: false
+ajax_modal_title: 'Товар успешно добавлен в корзину'
+ajax_modal_width: '400'
+ajax_modal_height: '300'
+colorbox_width: '400'
+colorbox_height: '300'
+enable_variation_cart_form_ajax: null
+non_modal_message: 'Товар успешно добавлен в корзину!'

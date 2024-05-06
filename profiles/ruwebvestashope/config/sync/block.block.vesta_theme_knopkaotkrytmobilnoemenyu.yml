@@ -1,0 +1,25 @@
+uuid: 96a6c791-d69f-4bcb-985d-ad565d6fef06
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:fc2ca299-79c3-464c-945d-dbc9e1310cac'
+  module:
+    - block_content
+  theme:
+    - vesta_theme
+id: vesta_theme_knopkaotkrytmobilnoemenyu
+theme: vesta_theme
+region: header_mobile
+weight: -13
+provider: null
+plugin: 'block_content:fc2ca299-79c3-464c-945d-dbc9e1310cac'
+settings:
+  id: 'block_content:fc2ca299-79c3-464c-945d-dbc9e1310cac'
+  label: 'Кнопка открыть мобильное меню'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

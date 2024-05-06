@@ -1,0 +1,30 @@
+uuid: 9d778106-f1a8-458b-82cf-e26882ba4b91
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:34729248-d482-49a2-89f1-5d7b12949e71'
+  module:
+    - block_content
+    - system
+  theme:
+    - vesta_theme
+id: vesta_theme_bloknastranicekontakty
+theme: vesta_theme
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:34729248-d482-49a2-89f1-5d7b12949e71'
+settings:
+  id: 'block_content:34729248-d482-49a2-89f1-5d7b12949e71'
+  label: 'Блок на странице Контакты'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /kontakty

@@ -1,0 +1,25 @@
+uuid: 73eae60b-9524-4bed-b1a6-a04b700e0886
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - vesta_theme
+id: vesta_theme_osnovnayanavigaciya_4
+theme: vesta_theme
+region: navigation_mobile
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Основная навигация'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

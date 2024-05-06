@@ -1,0 +1,24 @@
+uuid: fbd9a6ff-89ac-4c4c-937d-c7d41a2e017f
+langcode: ru
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.front.body
+    - node.type.front
+  module:
+    - user
+id: node.front.full
+targetEntityType: node
+bundle: front
+mode: full
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  langcode: true
+  search_api_excerpt: true

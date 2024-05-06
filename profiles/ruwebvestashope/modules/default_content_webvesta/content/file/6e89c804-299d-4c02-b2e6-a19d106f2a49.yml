@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 6e89c804-299d-4c02-b2e6-a19d106f2a49
+  default_langcode: ru
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: gr_1.png
+  uri:
+    -
+      value: 'public://2024-01/gr_1.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 2649
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1705663162

@@ -1,0 +1,10 @@
+name: CML API
+description: Commerce ML API
+type: module
+core_version_requirement: ^9 || ^10
+package: cml
+
+# Information added by Drupal.org packaging script on 2024-03-01
+version: '8.x-1.26'
+project: 'cmlapi'
+datestamp: 1709288301

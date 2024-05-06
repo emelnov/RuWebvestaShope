@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_cart
+      - commerce_product
+      - commerce_ajax_atc
+id: commerce_product_variation.commerce_ajax_atc_popup
+label: Ajax Add to Cart Popup
+targetEntityType: commerce_product_variation
+cache: true

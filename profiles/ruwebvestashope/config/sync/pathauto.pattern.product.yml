@@ -1,0 +1,22 @@
+uuid: 9572ba6c-aa02-4ad9-8183-4436f2025592
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: product
+label: Product
+type: 'canonical_entities:commerce_product'
+pattern: 'catalog/[commerce_product:field_select_catalog:0:entity:parents:join-path]/[commerce_product:field_select_catalog:1:entity:parents:join-path]/[commerce_product:field_select_catalog:2:entity:parents:join-path]/[commerce_product:field_select_catalog]/[commerce_product:title]'
+selection_criteria:
+  4e5a914a-790b-4081-a125-04b10ca35f3f:
+    id: 'entity_bundle:commerce_product'
+    negate: false
+    uuid: 4e5a914a-790b-4081-a125-04b10ca35f3f
+    context_mapping:
+      commerce_product: commerce_product
+    bundles:
+      vesta_product: vesta_product
+selection_logic: and
+weight: -6
+relationships: {  }

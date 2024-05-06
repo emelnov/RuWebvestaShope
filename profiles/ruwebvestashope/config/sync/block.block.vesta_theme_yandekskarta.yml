@@ -1,0 +1,25 @@
+uuid: ef8ca696-24f1-4359-bf24-ee995ba39265
+langcode: ru
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:65da989d-9a0e-4067-9ce3-d1762f4d9260'
+  module:
+    - block_content
+  theme:
+    - vesta_theme
+id: vesta_theme_yandekskarta
+theme: vesta_theme
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:65da989d-9a0e-4067-9ce3-d1762f4d9260'
+settings:
+  id: 'block_content:65da989d-9a0e-4067-9ce3-d1762f4d9260'
+  label: 'Яндекс карта'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

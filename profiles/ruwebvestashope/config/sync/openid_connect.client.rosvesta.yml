@@ -1,0 +1,18 @@
+uuid: bca6540f-e36e-42f0-a3c4-04cd7536f616
+langcode: ru
+status: true
+dependencies: {  }
+id: rosvesta
+label: rosvesta
+plugin: generic
+settings:
+  client_id: rosvesta
+  client_secret: rosvesta
+  iss_allowed_domains: rosvesta.ru
+  issuer_url: ''
+  authorization_endpoint: 'https://rosvesta.ru/oauth2/authorize'
+  token_endpoint: 'https://rosvesta.ru/oauth2/token'
+  userinfo_endpoint: 'https://rosvesta.ru/oauth2/UserInfo'
+  end_session_endpoint: ''
+  scopes:
+    - openid

@@ -1,0 +1,23 @@
+uuid: bf04ce3c-d5b9-41d9-a35f-c7c10b3a118c
+langcode: ru
+status: true
+dependencies: {  }
+id: admin_email
+label: 'Письмо администратору'
+from: '[site:mail]'
+toType: email
+to: '[site:mail]'
+toRole: admin
+cc: ''
+bcc: ''
+replyTo: ''
+subject: 'Создан новый заказ на сайте'
+body:
+  value: '<p>На сайте был сделан новый заказ #[commerce_order:order_number:value].</p><p>Посмотреть можно по ссылке [commerce_order:admin-url]</p>'
+  format: basic_html
+conditions: {  }
+conditionOperator: AND
+queue: false
+logToEntity: true
+event: order_placed
+targetEntityType: commerce_order
