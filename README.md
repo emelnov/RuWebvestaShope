@@ -1,5 +1,8 @@
 # RuWebvestaShope
 
+Скачать и распаковать drupal 10 
+
+https://www.drupal.org/download-latest/zip
 
 
 
